@@ -4,9 +4,11 @@
   "description": "0.0.1",
   "main": "bot.js",
   "dependencies": {
-    "node-telegram-bot-api" : "latest",
-    "twitter" : "latest",
-    "debug" : "latest"
+    "debug": "latest",
+    "google": "^1.4.0",
+    "node-telegram-bot-api": "latest",
+    "twitter": "latest",
+    "youtube-api": "^1.4.0"
   },
   "devDependencies": {},
   "scripts": {

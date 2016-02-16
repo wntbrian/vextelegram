@@ -1,13 +1,21 @@
-var Twitter = require('twitter');
+console.log("begin");
+var Youtube = require("youtube-api");
+var oauth = Youtube.authenticate(
+    {
+        type: "oauth"
+        , client_id: "184966178488-k52pnba0ul65f4kse72frn3jr013oebo.apps.googleusercontent.com"
+        , client_secret: "0-tsWJU-H-T5KYhFwAsCpuI6"
+        , redirect_url: "http://localhost"
+    }
+);
 
-var client = new Twitter({
-  consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-});
-client.get('statuses/user_timeline', { screen_name : "vostbank", count : 2 }, function(error, tweets, response){
-  if(error) throw error;
-  console.log(tweets);  // The favorites.
-  //console.log(response);  // Raw response object.
-});
+oauth.getToken("test", function(err, tokens) {
+    //if (err) {return console.log(err); }
+    oauth.setCredentials(tokens);
+    Youtube.channels.list(
+        {"part":"snippet", "maxResults": 5},
+        function (err, data) {console.log(err, data);
+        } );
+   });
+
+console.log("end")
