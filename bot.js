@@ -31,7 +31,7 @@ function randomInt (low, high) {
   return Math.floor(Math.random() * (high - low) + low);
 }
 var bot = new TelegramBot(token, options);
-bot.setWebHook("https://radius.iondv.ru/bot");
+bot.setWebHook(process.env.webhookurl);
 
 // Matches /echo [whatever]
 bot.onText(/\/echo (.+)/, function (msg, match) {
