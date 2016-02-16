@@ -8,7 +8,11 @@
     "google": "^1.4.0",
     "node-telegram-bot-api": "latest",
     "twitter": "latest",
-    "youtube-api": "^1.4.0"
+    "youtube-api": "^1.4.0",
+    "node-telegram-bot-api" : "latest",
+    "twitter" : "latest",
+    "debug" : "latest",
+    "feed-read" : "latest"
   },
   "devDependencies": {},
   "scripts": {
