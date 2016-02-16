@@ -159,6 +159,21 @@ bot.onText(/\Контакты/, function (msg, match) {
   bot.sendMessage(fromId,resp,opt);
 });
 bot.onText(/\Twitter/, function (msg, match) {
+  vb_twitter(msg);
+});
+
+// Any kind of message
+bot.on('message', function (msg) {
+  if (!msg.replayed) {
+    var chatId = msg.chat.id;
+    var txt = msg.text;
+    // photo can be: a file path, a stream or a Telegram file_id
+    //var photo = 'cat.jpg';
+    bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+    //bot.sendPhoto(chatId, photo, {caption: 'Lovely kittens'});
+  }
+});
+function vb_twitter(msg){
   var fromId = msg.from.id;
   var resp = "twitter";
   var opt = {
@@ -174,15 +189,4 @@ bot.onText(/\Twitter/, function (msg, match) {
   };
   resp = twittermsg[randomInt(0,10)].text;
   bot.sendMessage(fromId,resp,opt);
-});
-// Any kind of message
-bot.on('message', function (msg) {
-  if (!msg.replayed) {
-    var chatId = msg.chat.id;
-    var txt = msg.text;
-    // photo can be: a file path, a stream or a Telegram file_id
-    //var photo = 'cat.jpg';
-    bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
-    //bot.sendPhoto(chatId, photo, {caption: 'Lovely kittens'});
-  }
-});
+}
