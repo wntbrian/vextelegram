@@ -1,6 +1,6 @@
 var TelegramBot = require('node-telegram-bot-api');
 
-var token = '155337760:AAFctrjdJxpbZdyJU7HJeHzzqEFg7zBU8Ys';
+var token = process.env.bottoken;
 // Setup polling way
 
 var options = {
@@ -31,7 +31,7 @@ function randomInt (low, high) {
   return Math.floor(Math.random() * (high - low) + low);
 }
 var bot = new TelegramBot(token, options);
-bot.setWebHook(process.env.webhookurl);
+bot.setWebHook(process.env.webhookurl+"/"+token);
 
 // Matches /echo [whatever]
 bot.onText(/\/echo (.+)/, function (msg, match) {
