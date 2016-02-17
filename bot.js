@@ -61,7 +61,7 @@ bot.onText(/\/start/, function (msg, match) {
       keyboard :
       [
         ["Курсы валют"],["Подарки и бонусы"]
-        ["Контакты","Twitter"]
+        ["Контакты"],["Новости"],["Twitter"]
       ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -85,7 +85,7 @@ bot.onText(/\Курсы валют/, function (msg, match) {
       keyboard :
         [
             ["Курсы валют"],["Подарки и бонусы"]
-            ["Контакты","Twitter"]
+            ["Контакты"],["Новости"],["Twitter"]
         ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -105,6 +105,7 @@ bot.onText(/\Подарки и бонусы/, function (msg, match) {
         [
           ["Проценты в подарок","Бонус за покупки"],
           ["Кредитные каникулы","Рекомендация"]
+          ["Меню"]
         ],
       "one_time_keyboard" : false,
       "resize_keyboard" : true
@@ -128,7 +129,7 @@ bot.onText(/\Бонус за покупки/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
     var resp = "Программа поощрения держалелей банковских карт \"*Visa Platinum - VIP Сберегательный*\" \n" +
-        "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf)" +
+        "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf) \n" +
         "[Правила бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_pravila.pdf)";
     var opt = {
         parse_mode : "Markdown"
@@ -140,18 +141,17 @@ bot.onText(/\Кредитные каникулы/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
     var resp = "В жизни каждого человека бывают моменты, когда сложно своевременно внести вовремя платеж по кредиту." +
-        " В какой бы сложной ситуации вы бы не оказались, с опцией «Кредитные каникулы» от Восточного экспресс банка " +
-        "Вы будете уверены в завтрашнем дне, ведь банк может предоставить отсрочку по внесению выплат в погашение " +
-        "основного долга по кредиту. \n" +
-    "[Узнать подробности](http://www.vostbank.ru/page/kreditnye-kanikuly) \n" +
-    "☎ 8-800-100-7-100";
+        " В какой бы сложной ситуации вы бы не оказались, с опцией «*Кредитные каникулы*» Вы будете уверены " +
+        "в завтрашнем дне, ведь банк может предоставить отсрочку по внесению выплат в погашение основного долга по кредиту. \n" +
+        "[Узнать подробности](http://www.vostbank.ru/page/kreditnye-kanikuly) \n" +
+        "☎ 8-800-100-7-100";
     var opt = {
         parse_mode : "Markdown"
     };
     bot.sendMessage(fromId,resp,opt);
 });
 
-bot.onText(/\Кредитные каникулы/, function (msg, match) {
+bot.onText(/\Рекомендация/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
     var resp = "Теперь вы можете рекомендовать наш банк своим друзьям, родственникам, знакомым и получать подарки от банка. " +
