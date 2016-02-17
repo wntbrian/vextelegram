@@ -143,7 +143,16 @@ bot.onText(/\Бонусы/, function (msg, match) {
 bot.onText(/\Контакты/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "Адрес \n  набережная Садовническая, 9, пом. 18-21, часть пом.12	\n Отделение:\n    пн-пт: 9 :00-20:00,\n    сб: 10:00-17:00,\n    вс: выходной\n   Касса:\n    пн-пт: 9 :00-20:00,\n    сб: 10:00-17:00,\n    вс: выходной";
+  var resp =
+      "✅ Официальный сайт   vostbank.ru" +
+      "✅ Интернет-банк      online.vostbank.ru"+
+      "Вы можете позвонить нам по телефону 8-800-100-7-100"+
+      "Или написать в соц. сетях" +
+          "http://vk.com/vostbankru" +
+          "http://ok.ru/vostbank" +
+          "http://www.facebook.com/vostbank" +
+          "http://www.instagram.com/vostbank.ru" +
+          "http://twitter.com/vostbank";
   var opt = {
     parse_mode : "Markdown",
     reply_markup : {
