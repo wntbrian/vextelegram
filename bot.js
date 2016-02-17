@@ -175,6 +175,9 @@ bot.onText(/\Новости/, function (msg, match) {
 bot.onText(/\новости/, function (msg, match) {
     vb_news(msg);
 });
+bot.onText(/\таблица/, function (msg, match) {
+    vb_table(msg);
+});
 
 // Any kind of message
 bot.on('message', function (msg) {
@@ -199,4 +202,11 @@ function vb_news(msg){
   var i = randomInt(0,10);
   resp = news_json[i].title+"\n"+news_json[i].link;
   bot.sendMessage(fromId,resp,menu.main);
+}
+function vb_table(msg){
+    var fromId = msg.from.id;
+    var resp = "| numbers   |      Are      |  Cool |\n"+
+       " |---|:-:|------:|\n"+
+"| first |  s | $1600 |";
+    bot.sendMessage(fromId,resp,menu.none);
 }
