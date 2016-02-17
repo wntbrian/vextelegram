@@ -51,8 +51,7 @@ bot.onText(/\/start/, function (msg, match) {
     reply_markup : {
       keyboard :
       [
-        ["Курс","ЦБ"],
-        ["Акции"],
+        ["Курсы валют"],["Подарки и бонусы"]
         ["Контакты","Twitter"]
       ],
       "one_time_keyboard": true,
@@ -61,22 +60,23 @@ bot.onText(/\/start/, function (msg, match) {
   };
   bot.sendMessage(fromId,resp,opt);
 });
-bot.onText(/\Курс/, function (msg, match) {
+bot.onText(/\Курсы валют/, function (msg, match) {
   msg.replayed = true;
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
   var resp = "Курс валют на "+curs.update;
   for (var atr in curs.bank_currency){
     resp += "\n";
-    resp += atr+": Покупка: "+curs.bank_currency[atr].buy+" Продажа: "+curs.bank_currency[atr].sell;
+    resp += "      покупка             продажа             ЦБ";
+    resp += atr+"  "+curs.bank_currency[atr].buy+"    "+curs.bank_currency[atr].sell+"    "+curs.bank_currency[atr].cb;
   }
   var opt = {
     parse_mode : "Markdown",
     reply_markup : {
       keyboard :
         [
-          ["Доллар","Евро","Юань"],
-          ["Курс ЦБ"]
+            ["Курсы валют"],["Подарки и бонусы"]
+            ["Контакты","Twitter"]
         ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -84,91 +84,125 @@ bot.onText(/\Курс/, function (msg, match) {
   };
   bot.sendMessage(fromId,resp,opt);
 });
-bot.onText(/\ЦБ/, function (msg, match) {
-  msg.replayed = true;
-  var curs = require("./json/currency.json");
-  var fromId = msg.from.id;
-  var resp = "Курс валют центробанка "+curs.update;
-  for (var atr in curs.cbank_currency){
-    resp += "\n";
-    resp += atr+": "+curs.cbank_currency[atr].val;
-  }
-  var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-        [
-          ["Курс банка"]
-        ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
 
-    }
-  };
-  bot.sendMessage(fromId,resp,opt);
-});
-bot.onText(/\Акции/, function (msg, match) {
+bot.onText(/\Подарки и бонусы/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "здесь будут акции банка";
+  var resp = "";
   var opt = {
     parse_mode : "Markdown",
     reply_markup : {
       keyboard :
         [
-          ["Акция 1","Акция 2","Акция 3"],
-          ["Оформить заявку"]
+          ["Проценты в подарок","Бонус за покупки"],
+          ["Кредитные каникулы","Рекомендация"]
         ],
-      "one_time_keyboard" : true,
+      "one_time_keyboard" : false,
       "resize_keyboard" : true
     }
   };
   bot.sendMessage(fromId,resp,opt);
 });
-bot.onText(/\Бонусы/, function (msg, match) {
+bot.onText(/\Проценты в подарок/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "здесь будут бунусы";
+  var resp = "В благодарность за выбор и оказанное доверие " +
+      "Восточный экспресс банк дарит своим лучшим клиентам повышенную ставку по вкладу до +0,5% \n" +
+      "[Узнать подробности](http://www.vostbank.ru/moscow/action/percent-gift)";
   var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-        [
-          ["бонус 1","бонус 2","бонус 3"],
-          ["Оформить заявку"]
-        ],
-      "one_time_keyboard" : true,
-      "resize_keyboard" : true
-    }
+    parse_mode : "Markdown"
   };
   bot.sendMessage(fromId,resp,opt);
 });
+
+bot.onText(/\Бонус за покупки/, function (msg, match) {
+    msg.replayed = true;
+    var fromId = msg.from.id;
+    var resp = "Программа поощрения держалелей банковских карт ""*Visa Platinum - VIP Сберегательный*"" \n" +
+        "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf)" +
+        "[Правила бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_pravila.pdf)";
+    var opt = {
+        parse_mode : "Markdown"
+    };
+    bot.sendMessage(fromId,resp,opt);
+});
+
+bot.onText(/\Кредитные каникулы/, function (msg, match) {
+    msg.replayed = true;
+    var fromId = msg.from.id;
+    var resp = "В жизни каждого человека бывают моменты, когда сложно своевременно внести вовремя платеж по кредиту." +
+        " В какой бы сложной ситуации вы бы не оказались, с опцией «Кредитные каникулы» от Восточного экспресс банка " +
+        "Вы будете уверены в завтрашнем дне, ведь банк может предоставить отсрочку по внесению выплат в погашение " +
+        "основного долга по кредиту. \n" +
+    "[Узнать подробности](http://www.vostbank.ru/page/kreditnye-kanikuly) \n" +
+    "☎ 8-800-100-7-100";
+    var opt = {
+        parse_mode : "Markdown"
+    };
+    bot.sendMessage(fromId,resp,opt);
+});
+
+bot.onText(/\Кредитные каникулы/, function (msg, match) {
+    msg.replayed = true;
+    var fromId = msg.from.id;
+    var resp = "Теперь вы можете рекомендовать наш банк своим друзьям, родственникам, знакомым и получать подарки от банка. " +
+        "Подарок для вас за рекомендацию - 1000 бонусов на счет." +
+        "Подарок для друга - 500 бонусов за оформленный кредит или кредитную карту в нашем банке по вашей рекомендации. \n" +
+        "[Узнать подробности](http://www.vostbank.ru/moscow/private/podarki-i-bonusy/privodite-druzei-i-poluchaite-podarki)";
+    var opt = {
+        parse_mode : "Markdown"
+    };
+    bot.sendMessage(fromId,resp,opt);
+});
+
 bot.onText(/\Контакты/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
   var resp =
-      "• [Официальный сайт](vostbank.ru) /n" +
-      "• [Интернет-банк](online.vostbank.ru) /n"+
-      "Вы можете позвонить нам по телефону 8-800-100-7-100"+
-      "Или написать в соц. сетях" +
-          "[*Вконтакте*](http://vk.com/vostbankru)" +
-          "[*Одноклассники*](http://ok.ru/vostbank)" +
-          "[*Facebook*](http://www.facebook.com/vostbank)" +
-          "[*Instagram*](http://www.instagram.com/vostbank.ru)" +
-          "[*Twitter*](http://twitter.com/vostbank)";
+      "☎ 8-800-100-7-100 \n"+
+      "[Официальный сайт](vostbank.ru) \n" +
+      "[Интернет-банк](online.vostbank.ru) \n"+
+      "◆ [Вконтакте](http://vk.com/vostbankru) \n" +
+      "◆ [Одноклассники](http://ok.ru/vostbank) \n" +
+      "◆ [Facebook](http://www.facebook.com/vostbank) \n" +
+      "◆ [Instagram](http://www.instagram.com/vostbank.ru) \n" +
+      "◆ [Twitter](http://twitter.com/vostbank)";
   var opt = {
           parse_mode : "Markdown",
           reply_markup : {
               keyboard :
                   [
                       ["Главный офис","Банкоматы","Зоны 24"],
-                      ["Акции"]
+                      ["Акции"]["Бонусы"]
+                      ["Меню"]
                   ],
               "one_time_keyboard": true,
               "resize_keyboard" : true
           }
   };
   bot.sendMessage(fromId,resp,opt);
+});
+
+bot.onText(/\Меню/, function (msg, match) {
+    msg.replayed = true;
+    var fromId = msg.from.id;
+    var resp =
+        "Слушаю и подчиняюсь";
+    var opt = {
+        parse_mode : "Markdown",
+        reply_markup : {
+            keyboard :
+                [
+                    ["Контакты","Новости","Зоны 24"],
+                    ["Акции"]
+                     ["Меню"]
+                ],
+            "one_time_keyboard": true,
+            "resize_keyboard" : true
+        }
+    };
+    bot.sendMessage(fromId,resp,opt);
+
 });
 
 bot.onText(/\Twitter/, function (msg, match) {
