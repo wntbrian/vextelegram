@@ -14,6 +14,7 @@ var options = {
 var vost_news="http://www.vostbank.ru/news/feed/";
 var vost_youtube="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
 ////
+var menu = require("./json/menu.json");
 var credit = require("./credits.js");
 var news_json;
 var yt_json;
@@ -55,19 +56,7 @@ bot.onText(/\/start/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
   var resp = "Привет, я *бот* \n конкурса вэб.";
-  var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-      [
-        ["Курсы валют","Подарки и бонусы"],
-        ["Контакты","Новости","Twitter"]
-      ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
-    }
-  };
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.main);
 });
 bot.onText(/\Курсы валют/, function (msg, match) {
   msg.replayed = true;
@@ -79,39 +68,14 @@ bot.onText(/\Курсы валют/, function (msg, match) {
     resp += "\n";
    resp += atr+"	  "+curs.bank_currency[atr].buy+"		"+curs.bank_currency[atr].sell+"    	"+curs.bank_currency[atr].cb;
   }
-  var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-        [
-            ["Курсы валют","Подарки и бонусы"],
-            ["Контакты","Новости","Twitter"]
-        ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
-    }
-  };
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.main);
 });
 
 bot.onText(/\Подарки и бонусы/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
   var resp = "Узнайте о наших акциях";
-  var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-        [
-          ["Проценты в подарок","Бонус за покупки"],
-          ["Кредитные каникулы","Рекомендация"],
-          ["Меню"]
-        ],
-      "one_time_keyboard" : false,
-      "resize_keyboard" : true
-    }
-  };
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.bonus);
 });
 bot.onText(/\Проценты в подарок/, function (msg, match) {
   msg.replayed = true;
@@ -134,7 +98,7 @@ bot.onText(/\Бонус за покупки/, function (msg, match) {
     var opt = {
         parse_mode : "Markdown"
     };
-    bot.sendMessage(fromId,resp,opt);
+    bot.sendMessage(fromId,resp,menu.main);
 });
 
 bot.onText(/\Кредитные каникулы/, function (msg, match) {
@@ -148,7 +112,7 @@ bot.onText(/\Кредитные каникулы/, function (msg, match) {
     var opt = {
         parse_mode : "Markdown"
     };
-    bot.sendMessage(fromId,resp,opt);
+    bot.sendMessage(fromId,resp,menu.none);
 });
 
 bot.onText(/\Рекомендация/, function (msg, match) {
@@ -161,7 +125,7 @@ bot.onText(/\Рекомендация/, function (msg, match) {
     var opt = {
         parse_mode : "Markdown"
     };
-    bot.sendMessage(fromId,resp,opt);
+    bot.sendMessage(fromId,resp,menu.none);
 });
 
 bot.onText(/\Контакты/, function (msg, match) {
@@ -176,18 +140,6 @@ bot.onText(/\Контакты/, function (msg, match) {
       "◆ [Facebook](http://www.facebook.com/vostbank) \n" +
       "◆ [Instagram](http://www.instagram.com/vostbank.ru) \n" +
       "◆ [Twitter](http://twitter.com/vostbank)";
-  var opt = {
-          parse_mode : "Markdown",
-          reply_markup : {
-              keyboard :
-                  [
-                      ["Курсы валют","Подарки и бонусы"],
-                      ["Контакты","Новости","Twitter"]
-                  ],
-              "one_time_keyboard": true,
-              "resize_keyboard" : true
-          }
-  };
   bot.sendMessage(fromId,resp,opt);
 });
 
@@ -208,7 +160,7 @@ bot.onText(/\Меню/, function (msg, match) {
             "resize_keyboard" : true
         }
     };
-    bot.sendMessage(fromId,resp,opt);
+    bot.sendMessage(fromId,resp,menu.main);
 
 });
 
@@ -238,35 +190,13 @@ bot.on('message', function (msg) {
 function vb_twitter(msg){
   var fromId = msg.from.id;
   var resp = "twitter";
-  var opt = {
-    reply_markup : {
-      keyboard :
-          [
-              ["Курсы валют","Подарки и бонусы"],
-              ["Контакты","Новости","Twitter"]
-          ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
-    }
-  };
   resp = twittermsg[randomInt(0,10)].text;
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.main);
 }
 function vb_news(msg){
   var fromId = msg.from.id;
   var resp = "новости";
-  var opt = {
-    reply_markup : {
-      keyboard :
-          [
-              ["Курсы валют","Подарки и бонусы"],
-              ["Контакты","Новости","Twitter"]
-          ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
-    }
-  };
   var i = randomInt(0,10);
   resp = news_json[i].title+"\n"+news_json[i].link;
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.main);
 }
