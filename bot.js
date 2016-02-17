@@ -60,8 +60,8 @@ bot.onText(/\/start/, function (msg, match) {
     reply_markup : {
       keyboard :
       [
-        ["Курсы валют"],["Подарки и бонусы"]
-        ["Контакты"],["Новости"],["Twitter"]
+        ["Курсы валют","Подарки и бонусы"]
+        ["Контакты","Новости","Twitter"]
       ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -84,8 +84,8 @@ bot.onText(/\Курсы валют/, function (msg, match) {
     reply_markup : {
       keyboard :
         [
-            ["Курсы валют"],["Подарки и бонусы"]
-            ["Контакты"],["Новости"],["Twitter"]
+            ["Курсы валют","Подарки и бонусы"]
+            ["Контакты","Новости","Twitter"]
         ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -181,9 +181,8 @@ bot.onText(/\Контакты/, function (msg, match) {
           reply_markup : {
               keyboard :
                   [
-                      ["Главный офис","Банкоматы","Зоны 24"],
-                      ["Акции"]["Бонусы"]
-                      ["Меню"]
+                      ["Курсы валют","Подарки и бонусы"]
+                      ["Контакты","Новости","Twitter"]
                   ],
               "one_time_keyboard": true,
               "resize_keyboard" : true
@@ -202,9 +201,8 @@ bot.onText(/\Меню/, function (msg, match) {
         reply_markup : {
             keyboard :
                 [
-                    ["Контакты","Новости","Зоны 24"],
-                    ["Акции"]
-                     ["Меню"]
+                    ["Курсы валют","Подарки и бонусы"]
+                    ["Контакты","Новости","Twitter"]
                 ],
             "one_time_keyboard": true,
             "resize_keyboard" : true
