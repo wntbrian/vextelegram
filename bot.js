@@ -43,7 +43,7 @@ function randomInt (low, high) {
   return Math.floor(Math.random() * (high - low) + low);
 }
 var bot = new TelegramBot(token, options);
-//bot.setWebHook(process.env.webhookurl+"/"+token);
+bot.setWebHook(process.env.webhookurl+"/"+token);
 
 // Matches /echo [whatever]
 bot.onText(/\/echo (.+)/, function (msg, match) {
