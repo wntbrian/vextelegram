@@ -12,7 +12,11 @@
     "node-telegram-bot-api" : "latest",
     "twitter" : "latest",
     "debug" : "latest",
-    "feed-read" : "latest"
+    "feed-read" : "latest",
+    "request" : "*",
+    "cheerio" : "*",
+    "mongodb" : "*",
+    "assert" : "*"
   },
   "devDependencies": {},
   "scripts": {

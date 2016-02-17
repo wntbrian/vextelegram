@@ -13,20 +13,7 @@ var options = {
 
 
 ////
-var rss_news = "";
-feed("http://www.vostbank.ru/news/feed/", function(err, articles) {
-  if (err) throw err;
-  // Each article has the following properties:
-  //
-  //   * "title"     - The article title (String).
-  //   * "author"    - The author's name (String).
-  //   * "link"      - The original article link (String).
-  //   * "content"   - The HTML content of the article (String).
-  //   * "published" - The date that the article was published (Date).
-  //   * "feed"      - {name, source, link}
-  //
-  rss_news = articles;
-});
+var rss_news = require("./rssfeed.js").rss();
 ///
 var twittermsg = "";
 var Twitter = require('twitter');
