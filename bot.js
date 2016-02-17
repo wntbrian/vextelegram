@@ -118,7 +118,7 @@ bot.onText(/\Проценты в подарок/, function (msg, match) {
 bot.onText(/\Бонус за покупки/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
-    var resp = "Программа поощрения держалелей банковских карт ""*Visa Platinum - VIP Сберегательный*"" \n" +
+    var resp = "Программа поощрения держалелей банковских карт \"*Visa Platinum - VIP Сберегательный*\" \n" +
         "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf)" +
         "[Правила бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_pravila.pdf)";
     var opt = {
