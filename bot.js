@@ -147,26 +147,26 @@ bot.onText(/\Контакты/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
   var resp =
-      "✅ Официальный сайт   vostbank.ru" +
-      "✅ Интернет-банк      online.vostbank.ru"+
+      "• [Официальный сайт](vostbank.ru) /n" +
+      "• [Интернет-банк](online.vostbank.ru) /n"+
       "Вы можете позвонить нам по телефону 8-800-100-7-100"+
       "Или написать в соц. сетях" +
-          "http://vk.com/vostbankru" +
-          "http://ok.ru/vostbank" +
-          "http://www.facebook.com/vostbank" +
-          "http://www.instagram.com/vostbank.ru" +
-          "http://twitter.com/vostbank";
+          "[*Вконтакте*](http://vk.com/vostbankru)" +
+          "[*Одноклассники*](http://ok.ru/vostbank)" +
+          "[*Facebook*](http://www.facebook.com/vostbank)" +
+          "[*Instagram*](http://www.instagram.com/vostbank.ru)" +
+          "[*Twitter*](http://twitter.com/vostbank)";
   var opt = {
-    parse_mode : "Markdown",
-    reply_markup : {
-      keyboard :
-        [
-          ["Главный офис","Банкоматы","Зоны 24"],
-          ["Акции"]
-        ],
-      "one_time_keyboard": true,
-      "resize_keyboard" : true
-    }
+          parse_mode : "Markdown",
+          reply_markup : {
+              keyboard :
+                  [
+                      ["Главный офис","Банкоматы","Зоны 24"],
+                      ["Акции"]
+                  ],
+              "one_time_keyboard": true,
+              "resize_keyboard" : true
+          }
   };
   bot.sendMessage(fromId,resp,opt);
 });
