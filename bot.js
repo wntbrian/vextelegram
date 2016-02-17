@@ -97,7 +97,7 @@ bot.onText(/\Курсы валют/, function (msg, match) {
 bot.onText(/\Подарки и бонусы/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "";
+  var resp = "Узнайте о наших акциях";
   var opt = {
     parse_mode : "Markdown",
     reply_markup : {
