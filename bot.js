@@ -60,7 +60,7 @@ bot.onText(/\/start/, function (msg, match) {
     reply_markup : {
       keyboard :
       [
-        ["Курсы валют","Подарки и бонусы"]
+        ["Курсы валют","Подарки и бонусы"],
         ["Контакты","Новости","Twitter"]
       ],
       "one_time_keyboard": true,
@@ -84,7 +84,7 @@ bot.onText(/\Курсы валют/, function (msg, match) {
     reply_markup : {
       keyboard :
         [
-            ["Курсы валют","Подарки и бонусы"]
+            ["Курсы валют","Подарки и бонусы"],
             ["Контакты","Новости","Twitter"]
         ],
       "one_time_keyboard": true,
@@ -104,7 +104,7 @@ bot.onText(/\Подарки и бонусы/, function (msg, match) {
       keyboard :
         [
           ["Проценты в подарок","Бонус за покупки"],
-          ["Кредитные каникулы","Рекомендация"]
+          ["Кредитные каникулы","Рекомендация"],
           ["Меню"]
         ],
       "one_time_keyboard" : false,
@@ -181,7 +181,7 @@ bot.onText(/\Контакты/, function (msg, match) {
           reply_markup : {
               keyboard :
                   [
-                      ["Курсы валют","Подарки и бонусы"]
+                      ["Курсы валют","Подарки и бонусы"],
                       ["Контакты","Новости","Twitter"]
                   ],
               "one_time_keyboard": true,
@@ -201,7 +201,7 @@ bot.onText(/\Меню/, function (msg, match) {
         reply_markup : {
             keyboard :
                 [
-                    ["Курсы валют","Подарки и бонусы"]
+                    ["Курсы валют","Подарки и бонусы"],
                     ["Контакты","Новости","Twitter"]
                 ],
             "one_time_keyboard": true,
@@ -242,8 +242,8 @@ function vb_twitter(msg){
     reply_markup : {
       keyboard :
           [
-            ["Главный офис","Банкоматы","Зоны 24"],
-            ["Акции"]
+              ["Курсы валют","Подарки и бонусы"],
+              ["Контакты","Новости","Twitter"]
           ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
@@ -259,8 +259,8 @@ function vb_news(msg){
     reply_markup : {
       keyboard :
           [
-            ["Главный офис","Банкоматы","Зоны 24"],
-            ["Акции"]
+              ["Курсы валют","Подарки и бонусы"],
+              ["Контакты","Новости","Twitter"]
           ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
