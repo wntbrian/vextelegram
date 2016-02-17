@@ -1,5 +1,5 @@
 var TelegramBot = require('node-telegram-bot-api');
-
+var feed = require("feed-read");
 var token = process.env.bottoken;
 // Setup polling way
 
@@ -11,6 +11,9 @@ var options = {
   }
 };
 
+
+////
+var rss_news = require("./rssfeed.js").rss();
 ///
 var twittermsg = "";
 var Twitter = require('twitter');
@@ -167,8 +170,17 @@ bot.onText(/\Контакты/, function (msg, match) {
   };
   bot.sendMessage(fromId,resp,opt);
 });
+
 bot.onText(/\Twitter/, function (msg, match) {
   vb_twitter(msg);
+});
+//Новости
+bot.onText(/\Новости/, function (msg, match) {
+  vb_news(msg);
+});
+//новости
+bot.onText(/\новости/, function (msg, match) {
+    vb_news(msg);
 });
 
 // Any kind of message
@@ -188,14 +200,32 @@ function vb_twitter(msg){
   var opt = {
     reply_markup : {
       keyboard :
-        [
-          ["Главный офис","Банкоматы","Зоны 24"],
-          ["Акции"]
-        ],
+          [
+            ["Главный офис","Банкоматы","Зоны 24"],
+            ["Акции"]
+          ],
       "one_time_keyboard": true,
       "resize_keyboard" : true
     }
   };
   resp = twittermsg[randomInt(0,10)].text;
+  bot.sendMessage(fromId,resp,opt);
+}
+function vb_news(msg){
+  var fromId = msg.from.id;
+  var resp = "новости";
+  var opt = {
+    reply_markup : {
+      keyboard :
+          [
+            ["Главный офис","Банкоматы","Зоны 24"],
+            ["Акции"]
+          ],
+      "one_time_keyboard": true,
+      "resize_keyboard" : true
+    }
+  };
+  var i = randomInt(0,10);
+  resp = rss_news[i].title+"\n"+rss_news[i].link;
   bot.sendMessage(fromId,resp,opt);
 }
