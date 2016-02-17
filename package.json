@@ -5,18 +5,15 @@
   "main": "bot.js",
   "dependencies": {
     "debug": "latest",
-    "google": "^1.4.0",
     "node-telegram-bot-api": "latest",
     "twitter": "latest",
-    "youtube-api": "^1.4.0",
     "node-telegram-bot-api" : "latest",
     "twitter" : "latest",
     "debug" : "latest",
     "feed-read" : "latest",
     "request" : "*",
     "cheerio" : "*",
-    "mongodb" : "*",
-    "assert" : "*"
+    "mongodb" : "*"
   },
   "devDependencies": {},
   "scripts": {

@@ -10,10 +10,19 @@ var options = {
     //cert: __dirname+'/crt.pem'
   }
 };
-
-
 ////
-var rss_news = require("./rssfeed.js").rss();
+var vost_news="http://www.vostbank.ru/news/feed/";
+var vost_youtube="http://www.youtube.com/channel/UCXmCnhbOs5JaDmIKkldTBWA";
+////
+var credit = require("./credits.js");
+var news_json;
+var yt_json;
+require("./rssfeed.js").rss(vost_youtube,function (json,err) {
+  news_json = json;
+});
+require("./rssfeed.js").rss(vost_news,function (json,err) {
+  yt_json = json;
+});
 ///
 var twittermsg = "";
 var Twitter = require('twitter');
@@ -34,7 +43,7 @@ function randomInt (low, high) {
   return Math.floor(Math.random() * (high - low) + low);
 }
 var bot = new TelegramBot(token, options);
-bot.setWebHook(process.env.webhookurl+"/"+token);
+//bot.setWebHook(process.env.webhookurl+"/"+token);
 
 // Matches /echo [whatever]
 bot.onText(/\/echo (.+)/, function (msg, match) {
@@ -260,6 +269,6 @@ function vb_news(msg){
     }
   };
   var i = randomInt(0,10);
-  resp = rss_news[i].title+"\n"+rss_news[i].link;
+  resp = news_json[i].title+"\n"+news_json[i].link;
   bot.sendMessage(fromId,resp,opt);
 }
