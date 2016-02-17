@@ -18,10 +18,10 @@ var credit = require("./credits.js");
 var news_json;
 var yt_json;
 require("./rssfeed.js").rss(vost_youtube,function (json,err) {
-  news_json = json;
+  yt_json = json;
 });
 require("./rssfeed.js").rss(vost_news,function (json,err) {
-  yt_json = json;
+  news_json = json;
 });
 ///
 var twittermsg = "";
