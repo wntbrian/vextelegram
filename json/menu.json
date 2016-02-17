@@ -1,0 +1,37 @@
+{
+  "main" : {
+    "parse_mode" : "Markdown",
+    "reply_markup" : {
+      "keyboard" : [
+        [
+          "Курсы валют",
+          "Подарки и бонусы"
+        ],
+        [
+          "Контакты",
+          "Новости",
+          "Twitter"
+        ]
+      ],
+      "one_time_keyboard" : true,
+      "resize_keyboard" : true
+    }
+  },
+  "bonus" : {
+    "parse_mode" : "Markdown",
+    "reply_markup" : {
+      "keyboard" :
+      [
+        ["Проценты в подарок", "Бонус за покупки"],
+        ["Кредитные каникулы", "Рекомендация"],
+        ["Меню"]
+      ],
+      "one_time_keyboard" : false,
+      "resize_keyboard" : true
+    }
+  },
+  "none" : {
+    "parse_mode" : "Markdown"
+     }
+}
+
