@@ -12,7 +12,7 @@ var options = {
 };
 ////
 var vost_news="http://www.vostbank.ru/news/feed/";
-var vost_youtube="http://www.youtube.com/channel/UCXmCnhbOs5JaDmIKkldTBWA";
+var vost_youtube="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
 ////
 var credit = require("./credits.js");
 var news_json;
