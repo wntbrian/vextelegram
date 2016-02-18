@@ -12,7 +12,8 @@ var options = {
 };
 ////
 var vost_news="http://www.vostbank.ru/news/feed/";
-var vost_youtube="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
+var vost_youtube_bryansk="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
+var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA";
 ////
 var menu = require("./json/menu.json");
 var credit = require("./credits.js");
@@ -55,9 +56,17 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.onText(/\/start/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "Привет, я *бот* \n конкурса вэб.";
+  var resp = "Привет, я *бот* конкурса ВЭБ;
   bot.sendMessage(fromId,resp,menu.main);
 });
+
+bot.onText(/\Меню/, function (msg, match) {
+    msg.replayed = true;
+    var fromId = msg.from.id;
+    var resp = "Слушаю и подчиняюсь";
+    bot.sendMessage(fromId,resp,menu.main);
+});
+
 bot.onText(/\Курсы валют/, function (msg, match) {
   msg.replayed = true;
   var curs = require("./json/currency.json");
@@ -77,30 +86,23 @@ bot.onText(/\Подарки и бонусы/, function (msg, match) {
   var resp = "Узнайте о наших акциях";
   bot.sendMessage(fromId,resp,menu.bonus);
 });
+
 bot.onText(/\Проценты в подарок/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
   var resp = "В благодарность за выбор и оказанное доверие " +
       "Восточный экспресс банк дарит своим лучшим клиентам повышенную ставку по вкладу до +0,5% \n" +
       "[Узнать подробности](http://www.vostbank.ru/moscow/action/percent-gift)";
-  var opt = {
-    parse_mode : "Markdown"
-  };
-  bot.sendMessage(fromId,resp,opt);
+  bot.sendMessage(fromId,resp,menu.none);
 });
-
 bot.onText(/\Бонус за покупки/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
     var resp = "Программа поощрения держалелей банковских карт \"*Visa Platinum - VIP Сберегательный*\" \n" +
         "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf) \n" +
         "[Правила бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_pravila.pdf)";
-    var opt = {
-        parse_mode : "Markdown"
-    };
-    bot.sendMessage(fromId,resp,menu.main);
+    bot.sendMessage(fromId,resp,menu.none);
 });
-
 bot.onText(/\Кредитные каникулы/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
@@ -109,12 +111,8 @@ bot.onText(/\Кредитные каникулы/, function (msg, match) {
         "в завтрашнем дне, ведь банк может предоставить отсрочку по внесению выплат в погашение основного долга по кредиту. \n" +
         "[Узнать подробности](http://www.vostbank.ru/page/kreditnye-kanikuly) \n" +
         "☎ 8-800-100-7-100";
-    var opt = {
-        parse_mode : "Markdown"
-    };
     bot.sendMessage(fromId,resp,menu.none);
 });
-
 bot.onText(/\Рекомендация/, function (msg, match) {
     msg.replayed = true;
     var fromId = msg.from.id;
@@ -122,9 +120,6 @@ bot.onText(/\Рекомендация/, function (msg, match) {
         "Подарок для вас за рекомендацию - 1000 бонусов на счет." +
         "Подарок для друга - 500 бонусов за оформленный кредит или кредитную карту в нашем банке по вашей рекомендации. \n" +
         "[Узнать подробности](http://www.vostbank.ru/moscow/private/podarki-i-bonusy/privodite-druzei-i-poluchaite-podarki)";
-    var opt = {
-        parse_mode : "Markdown"
-    };
     bot.sendMessage(fromId,resp,menu.none);
 });
 
@@ -140,28 +135,7 @@ bot.onText(/\Контакты/, function (msg, match) {
       "◆ [Facebook](http://www.facebook.com/vostbank) \n" +
       "◆ [Instagram](http://www.instagram.com/vostbank.ru) \n" +
       "◆ [Twitter](http://twitter.com/vostbank)";
-  bot.sendMessage(fromId,resp,opt);
-});
-
-bot.onText(/\Меню/, function (msg, match) {
-    msg.replayed = true;
-    var fromId = msg.from.id;
-    var resp =
-        "Слушаю и подчиняюсь";
-    var opt = {
-        parse_mode : "Markdown",
-        reply_markup : {
-            keyboard :
-                [
-                    ["Курсы валют","Подарки и бонусы"],
-                    ["Контакты","Новости","Twitter"]
-                ],
-            "one_time_keyboard": true,
-            "resize_keyboard" : true
-        }
-    };
-    bot.sendMessage(fromId,resp,menu.main);
-
+  bot.sendMessage(fromId,resp,menu.main);
 });
 
 bot.onText(/\Twitter/, function (msg, match) {
@@ -170,10 +144,6 @@ bot.onText(/\Twitter/, function (msg, match) {
 //Новости
 bot.onText(/\Новости/, function (msg, match) {
   vb_news(msg);
-});
-//новости
-bot.onText(/\новости/, function (msg, match) {
-    vb_news(msg);
 });
 bot.onText(/\таблица/, function (msg, match) {
     vb_table(msg);
@@ -203,10 +173,11 @@ function vb_news(msg){
   resp = news_json[i].title+"\n"+news_json[i].link;
   bot.sendMessage(fromId,resp,menu.main);
 }
+//TODO найти решения для таблицы
 function vb_table(msg){
     var fromId = msg.from.id;
-    var resp = "| numbers   |      Are      |  Cool |\n"+
-       " |---|:-:|------:|\n"+
-"| first |  s | $1600 |";
-    bot.sendMessage(fromId,resp,menu.none);
+    var resp = "' 012asd '\n"+
+       "'  2we;09'\n"+
+"'l1l1l1l1'";
+    bot.sendMessage(fromId,resp,menu.main);
 }
