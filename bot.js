@@ -176,8 +176,9 @@ function vb_news(msg){
 //TODO найти решения для таблицы
 function vb_table(msg){
     var fromId = msg.from.id;
-    var resp = "' 012asd \n'"+
-       "'  2we;09\n'"+
-"'l1l1l1l1'";
+    var resp = "Проверка\n" +
+        "'''раз два три четыре \n'''"+
+       "'''пять шесть семь\n'''"+
+"'''djçlkç'''";
     bot.sendMessage(fromId,resp,menu.main);
 }
