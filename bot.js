@@ -75,7 +75,7 @@ bot.onText(/\Курсы валют/, function (msg, match) {
     resp += "```ВАЛЮТА    ПОКУПКА   ПРОДАЖА   ЦБ```";
     for (var atr in curs.bank_currency){
     resp += "\n";
-    resp += "```" + atr + "       "
+    resp += "```" + atr + "       " +
        String(curs.bank_currency[atr].buy   + "          ").slice(0,11) +
        String(curs.bank_currency[atr].sell  + "          ").slice(0,11) +
        curs.bank_currency[atr].cb +
