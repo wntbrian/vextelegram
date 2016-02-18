@@ -12,7 +12,7 @@ var options = {
 };
 ////
 var vost_news="http://www.vostbank.ru/news/feed/";
-var vost_youtube_bryansk="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
+//var vost_youtube_bryansk="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
 var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA";
 ////
 var menu = require("./json/menu.json");
@@ -56,7 +56,7 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.onText(/\/start/, function (msg, match) {
   msg.replayed = true;
   var fromId = msg.from.id;
-  var resp = "Привет, я *бот* конкурса ВЭБ;
+  var resp = "Привет, я *бот* конкурса ВЭБ";
   bot.sendMessage(fromId,resp,menu.main);
 });
 
