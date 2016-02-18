@@ -72,7 +72,7 @@ bot.onText(/\Курсы валют/, function (msg, match) {
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
   var resp = "Курс валют на "+curs.update+"\n";
-    resp += "```"+String("ПОКУПКА      ").slice(10)+String("ПРОДАЖА      ").slice(10)+String("ЦБ        ").slice(10)+"```";
+    //resp += "```"+String("ПОКУПКА      ").slice(10)+String("ПРОДАЖА      ").slice(10)+String("ЦБ        ").slice(10)+"```";
     for (var atr in curs.bank_currency){
     resp += "\n";
     resp += "```" + atr +
