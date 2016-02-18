@@ -76,9 +76,9 @@ bot.onText(/\Курсы валют/, function (msg, match) {
     for (var atr in curs.bank_currency){
     resp += "\n";
     resp += "```" + atr +
-       String("          "+curs.bank_currency[atr].buy).slice(-10) +
-       String("          "+curs.bank_currency[atr].sell).slice(-10) +
-       String("          "+curs.bank_currency[atr].cb).slice(-10) +
+       String("          "+curs.bank_currency[atr].buy).slice(10) +
+       String("          "+curs.bank_currency[atr].sell).slice(10) +
+       String("          "+curs.bank_currency[atr].cb).slice(10) +
        "```";
   }
   bot.sendMessage(fromId,resp,menu.main);
