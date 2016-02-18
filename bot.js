@@ -72,14 +72,13 @@ bot.onText(/\Курсы валют/, function (msg, match) {
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
   var resp = "Курс валют на "+curs.update+"\n";
-    resp += "```ВАЛЮТА    ПОКУПКА   ПРОДАЖА   ЦБ```";
+    //resp += "```ВАЛЮТА    ПОКУПКА   ПРОДАЖА   ЦБ```";
     for (var atr in curs.bank_currency){
     resp += "\n";
-    resp += "```" + atr + "       " +
-       String(curs.bank_currency[atr].buy   + "          ").slice(0,11) +
-       String(curs.bank_currency[atr].sell  + "          ").slice(0,11) +
-       curs.bank_currency[atr].cb +
-       "```";
+    resp += "```" + atr + "  " +
+       curs.bank_currency[atr].buy  + " / " +
+       curs.bank_currency[atr].sell + " (" +
+       curs.bank_currency[atr].cb + ")```";
   }
   bot.sendMessage(fromId,resp,menu.main);
 });
