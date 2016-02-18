@@ -177,8 +177,8 @@ function vb_news(msg){
 function vb_table(msg){
     var fromId = msg.from.id;
     var resp = "Проверка\n" +
-        "'''раз два три четыре '''"+
-       "'''пять шесть семь'''"+
-"'''djçlkç'''";
+        "```раз два три четыре ```\n"+
+       "```пять шесть семь```"+
+"`djçlkç`";
     bot.sendMessage(fromId,resp,menu.main);
 }
