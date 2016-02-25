@@ -97,51 +97,68 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 //  vb_credit_cards(msg);
 //});
 // Any kind of message
+
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
-    var txt = msg.text;
-    switch (txt) {
-        case "/start":
-            vb_start(msg);
-            break;
-        case "Карты":
-            vb_credit_cards(msg);
-            break;
-        case "таблица":
-            vb_table(msg);
-            break;
-        case "Новости":
-            vb_news(msg);
-            break;
-        case "Twitter":
-            vb_twitter(msg);
-            break;
-        case "Контакты":
-            vb_contacts(msg);
-            break;
-        case "Рекомендация":
-            vb_recom(msg);
-            break;
-        case "Кредитные каникулы":
-            vb_credit_vacation(msg);
-            break;
-        case "Бонус за покупки":
-            vb_bonus(msg);
-            break;
-        case "Подарки и бонусы":
-            vb_procent(msg);
-            break;
-        case "Курсы валют":
-            vb_curs(msg);
-            break;
-        case "Меню":
-            vb_menu(msg);
-            break;
-        case "Проценты в подарок":
-            vb_procent(msg);
-            break;
-        default:
-            bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+    if(typeof msg.location !== "undefined")
+    {
+        vb_atm_near(msg);
+    }
+
+    if(typeof msg.text !== "undefined")
+    {
+        switch (msg.text) {
+            case "/start":
+                vb_start(msg);
+                break;
+            case "Карты":
+                vb_credit_cards(msg);
+                break;
+            case "таблица":
+                vb_table(msg);
+                break;
+            case "Новости":
+                vb_news(msg);
+                break;
+            case "Twitter":
+                vb_twitter(msg);
+                break;
+            case "Контакты":
+                vb_contacts(msg);
+                break;
+            case "Рекомендация":
+                vb_recom(msg);
+                break;
+            case "Кредитные каникулы":
+                vb_credit_vacation(msg);
+                break;
+            case "Бонус за покупки":
+                vb_bonus(msg);
+                break;
+            case "Подарки и бонусы":
+                vb_procent(msg);
+                break;
+            case "Курсы валют":
+                vb_curs(msg);
+                break;
+            case "Меню":
+                vb_menu(msg);
+                break;
+            case "Проценты в подарок":
+                vb_procent(msg);
+                break;
+            case "youtube":
+                vb_youtube(msg);
+                break;
+            case "Банкомат":
+                vb_atm_near(msg);
+                break;
+            default:
+                bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+// TODO добавить меню для банкоматов
+            // TODO добавить меню для кредитных карт
+            // TODO добавить меню для отделений
+    }
 
     }
     // photo can be: a file path, a stream or a Telegram file_id
@@ -235,9 +252,16 @@ function vb_twitter(msg){
 function vb_news(msg){
   var fromId = msg.from.id;
   var resp = "новости";
-  var i = randomInt(0,10);
+  var i = randomInt(0,news_json.length-1);
   resp = news_json[i].title+"\n"+news_json[i].link;
   bot.sendMessage(fromId,resp,menu.main);
+}
+function vb_youtube(msg){
+    var fromId = msg.from.id;
+    var resp = "youtube";
+    var i = randomInt(0,yt_json.length-1);
+    resp = yt_json[i].title+"\n"+yt_json[i].link;
+    bot.sendMessage(fromId,resp,menu.main);
 }
 //TODO найти решения для таблицы
 function vb_table(msg){
@@ -250,7 +274,21 @@ function vb_table(msg){
 }
 function vb_atm_near(msg)
 {
-  // TODO поиск ближайшего АТМ
+    var fromId = msg.from.id;
+    bot.sendMessage(fromId, 'Вышли мне координаты', menu.reply)
+        .then(function (sended) {
+            var chatId = sended.chat.id;
+            var messageId = sended.message_id;
+            bot.onReplyToMessage(chatId, messageId, function (message) {
+                MongoClient.connect(mongourl, function(err, db) {
+                    findNearAtm(db,message.location,fromId, function() {
+                        db.close();
+                    });
+                });
+            });
+        });
+  // TODO расширить список банкоматов на 2 или 3
+
  // SELECT id,
  // ( 6371 * acos( cos( radians(43.866379) ) * cos( radians( lat ) ) * cos( radians( lng ) — radians(56.347038) ) + sin( radians(43.866379) ) * sin( radians( lat ) ) ) ) AS distance
  // FROM markers
@@ -258,6 +296,7 @@ function vb_atm_near(msg)
  // ORDER BY distance
  // LIMIT 0 , 20;
 }
+// TODO добавить объекты офисов
 function vb_credit_cards(msg)
 {
   var fromId = msg.from.id;
@@ -272,7 +311,7 @@ var findCreditCard = function(db,fromId, callback) {
     if (err) {
       console.log(err);
     } else if (result.length) {
-      var int = randomInt(0,result.length);
+      var int = randomInt(0,result.length-1);
       resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
       resp += "\n";
       resp += result[int].desc;
@@ -283,4 +322,31 @@ var findCreditCard = function(db,fromId, callback) {
     //Close connection
     db.close();
   });
+};
+var findNearAtm = function(db,coord,fromId, callback) {
+    db.collection('atm').find(
+        {
+            loc:
+            { $near :
+            {
+                $geometry: { type: "Point",  coordinates: coord },
+                $minDistance: 0,
+                $maxDistance: 5000
+            }
+            }
+        }
+    ).toArray(function (err, result) {
+        if (err) {
+            console.log(err);
+        } else if (result.length) {
+            //console.log(result[0].loc.coordinates);
+            var resp = "Ближайший банкомат к вам: "+ result[0].desc;
+            bot.sendMessage(fromId,resp,menu.main);
+            bot.sendLocation(fromId,result[0].loc.coordinates[1],result[0].loc.coordinates[0],menu.main);
+        } else {
+            console.log('No document(s) found with defined "find" criteria!');
+        }
+        //Close connection
+        db.close();
+    });
 };

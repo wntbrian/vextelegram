@@ -33,6 +33,10 @@
   },
   "none" : {
     "parse_mode" : "Markdown"
-     }
+     },
+  "reply" : {
+    "force_reply" : true,
+    "parse_mode" : "Markdown"
+  }
 }
 
