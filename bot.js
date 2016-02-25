@@ -57,54 +57,96 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
   var resp = match[1];
   bot.sendMessage(fromId, resp);
 });
-bot.onText(/\/start/, function (msg, match) {
-  vb_start(msg);
-});
-bot.onText(/\Меню/, function (msg, match) {
-  vb_menu(msg);
-});
-
-bot.onText(/\Курсы валют/, function (msg, match) {
-  vb_curs(msg);
-});
-bot.onText(/\Подарки и бонусы/, function (msg, match) {
-  vb_present_bonus(msg);
-});
-
-bot.onText(/\Проценты в подарок/, function (msg, match) {
-  vb_procent(msg);
-});
-bot.onText(/\Бонус за покупки/, function (msg, match) {
-  vb_bonus(msg);
-});
-bot.onText(/\Кредитные каникулы/, function (msg, match) {
-  vb_credit_vacation(msg);
-});
-bot.onText(/\Рекомендация/, function (msg, match) {
-   vb_recom(msg);
-});
-bot.onText(/\Контакты/, function (msg, match) {
-  vb_contacts(msg);
-});
-bot.onText(/\Twitter/, function (msg, match) {
-  vb_twitter(msg);
-});
-bot.onText(/\Новости/, function (msg, match) {
-  vb_news(msg);
-});
-bot.onText(/\таблица/, function (msg, match) {
-    vb_table(msg);
-});
-bot.onText(/\Карты/, function (msg, match) {
-  vb_credit_cards(msg);
-});
+//bot.onText(/\/start/, function (msg, match) {
+//  vb_start(msg);
+//});
+//bot.onText(/\Меню/, function (msg, match) {
+//  vb_menu(msg);
+//});
+//bot.onText(/\Курсы валют/, function (msg, match) {
+//  vb_curs(msg);
+//});
+//bot.onText(/\Подарки и бонусы/, function (msg, match) {
+//  vb_present_bonus(msg);
+//});
+//bot.onText(/\Проценты в подарок/, function (msg, match) {
+//  vb_procent(msg);
+//});
+//bot.onText(/\Бонус за покупки/, function (msg, match) {
+//
+//});
+//bot.onText(/\Кредитные каникулы/, function (msg, match) {
+//  vb_credit_vacation(msg);
+//});
+//bot.onText(/\Рекомендация/, function (msg, match) {
+//   vb_recom(msg);
+//});
+//bot.onText(/\Контакты/, function (msg, match) {
+//  vb_contacts(msg);
+//});
+//bot.onText(/\Twitter/, function (msg, match) {
+//  vb_twitter(msg);
+//});
+//bot.onText(/\Новости/, function (msg, match) {
+//  vb_news(msg);
+//});
+//bot.onText(/\таблица/, function (msg, match) {
+//    vb_table(msg);
+//});
+//bot.onText(/\Карты/, function (msg, match) {
+//  vb_credit_cards(msg);
+//});
 // Any kind of message
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
     var txt = msg.text;
+    switch (txt) {
+        case "/start":
+            vb_start(msg);
+            break;
+        case "Карты":
+            vb_credit_cards(msg);
+            break;
+        case "таблица":
+            vb_table(msg);
+            break;
+        case "Новости":
+            vb_news(msg);
+            break;
+        case "Twitter":
+            vb_twitter(msg);
+            break;
+        case "Контакты":
+            vb_contacts(msg);
+            break;
+        case "Рекомендация":
+            vb_recom(msg);
+            break;
+        case "Кредитные каникулы":
+            vb_credit_vacation(msg);
+            break;
+        case "Бонус за покупки":
+            vb_bonus(msg);
+            break;
+        case "Подарки и бонусы":
+            vb_procent(msg);
+            break;
+        case "Курсы валют":
+            vb_curs(msg);
+            break;
+        case "Меню":
+            vb_menu(msg);
+            break;
+        case "Проценты в подарок":
+            vb_procent(msg);
+            break;
+        default:
+            bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+
+    }
     // photo can be: a file path, a stream or a Telegram file_id
     //var photo = 'cat.jpg';
-    bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+
     //bot.sendPhoto(chatId, photo, {caption: 'Lovely kittens'});
 });
 function vb_curs(msg){
@@ -230,8 +272,8 @@ var findCreditCard = function(db,fromId, callback) {
     if (err) {
       console.log(err);
     } else if (result.length) {
-      var int = randomInt(0,10);
-      resp = "["+result[int].title+"](http://www.vostbank.ru/khabarovsk"+result[int].link+")";
+      var int = randomInt(0,result.length);
+      resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
       resp += "\n";
       resp += result[int].desc;
       bot.sendMessage(fromId,resp,menu.main);
