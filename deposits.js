@@ -23,11 +23,19 @@ request({
                childType = tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].type;
 
                 if (childType=="tag") {
-                    if (desc=="") {
-                        desc = tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[0].data;
-                    } else {
-                        desc += "\\n" + tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[0].data;
+                    var nStr = tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children.length;
+                    var tStr = "";
+                    for (iStr=0; iStr<nStr; iStr++){
+                        if (tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[iStr].type=="text") {
+                            tStr +=tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[iStr].data
                         }
+                    }
+                    desc += tStr;
+//                    if (desc=="") {
+//                        desc = tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[0].data;
+//                    } else {
+//                        desc += "\\n" + tmp.children[0].next.children[0].next.next.next.next.next.next.next.children[id].children[0].data;
+//                        }
                 };
             };
             if (str == "") {
