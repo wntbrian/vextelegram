@@ -1,0 +1,6029 @@
+<?xml version="1.0"?>
+<ymaps:ymaps xmlns:ymaps="http://maps.yandex.ru/ymaps/1.x" xmlns:gml="http://www.opengis.net/gml" xmlns:repr="http://maps.yandex.ru/representation/1.x" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maps.yandex.ru/schemas/ymaps/1.x/ymaps.xsd">
+ <repr:Representation>
+  <repr:Style gml:id="atm">
+   <repr:iconStyle>
+    <repr:href>/sites/default/files/icons/office-tick.png</repr:href>
+    <repr:size x="28" y="37"/>
+    <repr:offset x="-14" y="-37"/>
+   </repr:iconStyle>
+  </repr:Style>
+ </repr:Representation>
+ <ymaps:GeoObjectCollection>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.355255 59.918830</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 1000</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101022</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.382673 42.865759</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3234</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100990</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.401775 67.567889</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7003</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100946</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.862687 56.013371</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 0900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100290</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.742785 62.038915</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2263</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100918</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.726454 62.027760</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2260</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100924</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.382385 55.962201</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0912</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>100886</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.676577 52.984854</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97566</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.170650 48.525312</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Аэропорт</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97578</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>123.932679 53.977332</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4218</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97556</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.937300 43.104625</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3205</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97554</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.579119 50.596776</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7122</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97544</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.941154 43.127071</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3209</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97542</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>45.118872 54.214235</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 9248</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97538</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.542647 50.257282</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0143</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97530</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.061015 48.486706</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0202</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97516</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>99.034624 54.908327</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5934</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97514</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.172939 56.123050</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5929</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97510</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>47.157428 61.313813</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7038</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97502</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.065054 48.474287</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Прокуратура</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97500</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.079611 48.474933</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0219</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97496</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.071234 48.496667</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0208</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97494</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>124.710180 56.654662</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2266</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97492</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>100.580297 54.563601</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5938</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97484</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.547258 50.261147</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4202</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97482</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>124.750526 55.155518</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4210</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97478</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>40.416649 56.144660</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1158</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97468</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.957288 43.789291</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3215</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97462</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>29.082869 59.908829</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1037</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97458</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.110488 58.003553</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Магнит&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97456</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>137.010951 50.550594</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2238</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97448</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.166916 56.738790</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1104</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97444</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>141.861664 46.694235</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2235</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97440</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.241109 57.961027</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Виват</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97434</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.628942 55.746489</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1142</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97432</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.666616 53.690473</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0907</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97430</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.213557 58.007553</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Пирамида</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97426</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.302089 52.233514</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Версаль&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97414</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.052618 44.268651</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3242</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97410</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>134.277975 46.437018</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3227</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97412</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.750332 56.310205</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5919</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97406</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.358659 57.810004</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1091</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97402</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.716369 51.658476</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5937</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97398</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.113559 48.559010</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0227</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97400</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>102.661010 57.984607</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5925</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97396</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.288966 52.279969</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5912</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97390</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>50.796797 61.659627</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1036</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97380</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.440497 53.724332</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0932</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97378</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.288856 58.113266</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Аптека</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97374</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.325913 52.279803</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5906</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97376</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.211856 52.354828</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5903</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97372</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.092924 48.482382</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0254</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97370</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.349407 61.782584</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1076</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97368</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.741555 62.031666</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2258</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97362</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>88.393241 69.496720</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0970</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97360</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.091240 48.457510</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 0200</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97358</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.739961 62.031508</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2262</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97356</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.958272 55.991884</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0968</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97348</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.321540 53.831933</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0933</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97346</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.821643 64.565686</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7024</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97342</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>90.479710 56.253734</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0929</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97336</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.628942 55.746489</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1142</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97334</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.630176 51.821886</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4902</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97324</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.636536 56.151408</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5922</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97320</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>102.062223 53.928632</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5933</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97322</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.273343 52.285346</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97318</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.261415 58.007248</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Семья</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97316</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.943397 56.005951</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0939</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97314</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.921059 43.126091</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Дилан-Маркет&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97310</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.184721 57.965443</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Виват</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97308</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>31.354167 57.991979</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1047</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97306</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.424108 54.919975</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1143</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97302</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.098339 69.005180</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1080</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97296</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.071506 49.080655</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2254</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97290</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.634084 53.058990</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Планета</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97288</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.985636 62.539297</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2267</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97284</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.205510 52.263773</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5908</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97278</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.824168 59.411439</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1223</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97276</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.681384 52.982471</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Офис МТС</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97268</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>32.261031 52.754508</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1182</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97270</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>84.949110 56.506796</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0941</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97264</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.869479 42.810893</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3219</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97256</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>99.656870 56.084596</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5945</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97246</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.135017 61.479476</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3212</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97248</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.886518 43.119451</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Бизнес-центр Fresh Plaza</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97242</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.149731 51.521353</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5940</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97236</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.288410 52.286247</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Сезон&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97234</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.957288 43.789291</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3215</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97228</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.779113 53.152865</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5955</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97226</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.412071 42.972071</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3229</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97224</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>137.009456 50.537986</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0205</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97216</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.657782 52.733100</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5926</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97214</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.355158 59.918843</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 1000</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97138</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.732638 46.944856</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2233</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97140</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.591790 55.772804</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1102</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97142</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>60.609634 56.808898</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 1400</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97144</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.700904 53.707096</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8506</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101528</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>137.022205 50.558646</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0252</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97156</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>32.048402 54.772098</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8128</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97160</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.286499 57.983895</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Ангор</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97166</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.919532 56.000261</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0942</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97168</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.887725 52.545650</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5914</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97184</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.630299 53.061017</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2214</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97190</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>133.040509 51.135079</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0264</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97194</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.907043 43.127383</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>&quot;Промстрой НИИ Проект&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97196</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>140.257294 49.090110</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0222</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97198</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.097781 52.209764</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5930</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97204</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.486178 52.073063</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3905</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97136</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>109.337109 55.636067</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4910</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97132</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.230803 57.992880</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Берег</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97126</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>20.500091 54.716464</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Маяк</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97106</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.243633 58.012528</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1218</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97092</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.442958 53.864751</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7103</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97088</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>114.924163 60.719557</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2264</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97084</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.270349 54.538634</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1139</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97082</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.188487 58.007135</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Пермский государственный университет, корпус 2</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97076</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.295266 58.026665</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Виват</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97072</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.054544 49.011284</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2213</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97068</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>136.907706 50.222382</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0259</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97062</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.133716 48.476651</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Золотые Башни&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97054</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.910352 56.043300</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0938</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97036</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>73.381424 54.986821</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0944</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97032</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.380554 58.107709</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1220</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97030</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.089540 68.959596</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1002</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97028</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.306271 58.109759</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Семья</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97024</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.054004 47.967685</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2221</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97026</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.273343 52.285346</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97022</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>50.817483 61.671180</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1068</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96990</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.577639 51.839677</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4933</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96992</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.635089 53.056004</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2297</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96996</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>86.074175 55.344651</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 6960</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97002</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>128.138246 51.376965</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4213</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97006</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>20.134980 54.675501</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1075</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97012</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.577940 52.603864</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1120</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97014</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.187951 58.008422</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Пермский государственный университет, главный корпус</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>97018</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.278033 58.019841</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Аптека</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96980</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>82.906337 54.990164</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0943</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96982</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.172724 43.353625</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3222</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96978</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.569713 50.552542</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Сити Молл Белгородский&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96974</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>128.382557 51.098283</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4217</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96970</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.512512 52.029292</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3907</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96968</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.942813 53.587738</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2231</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96958</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>106.530155 51.286478</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4909</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96952</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.111932 48.426717</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Атриум&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96950</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.068617 48.478244</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0201</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96942</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>95.698590 56.203180</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0902</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96940</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.070734 68.960232</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7015</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96932</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>93.529845 56.246086</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0974</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96928</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>102.164308 54.107209</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5932</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96926</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.371046 61.790169</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1079</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96914</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.527607 50.299502</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4203</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96908</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.895668 42.833467</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3221</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96896</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>133.271804 44.161017</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3224</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96892</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>124.710271 56.660137</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2265</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96890</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.443635 58.145372</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Головановский гастроном</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96884</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.074798 48.471698</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Гостиница &quot;Амур&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96880</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>143.151709 51.811678</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2232</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96874</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.817237 56.023945</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0925</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96870</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.191697 43.356140</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3252</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96856</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.934652 55.795344</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7644</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96858</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>38.440135 55.789339</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1147</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96834</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.888189 50.411787</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1180</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96838</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>31.235700 58.541699</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7016</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96844</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>105.876151 53.961719</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5954</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96830</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.235330 52.256386</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5910</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96826</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.094260 48.483568</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Магнит</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96824</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>38.001936 59.119609</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96816</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.134120 58.038251</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Виват</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96820</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.383204 58.133988</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Левшино</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96814</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.245386 58.013542</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Администрация города Пермь</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96812</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>40.521513 64.539166</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1081</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96810</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.294235 58.013066</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Семья</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96806</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.893888 58.386225</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1030</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96798</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>40.799434 48.177443</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1312</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96794</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.767533 60.706082</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1022</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96784</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.260183 58.000751</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Администрация Свердловского района города Пермь</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96782</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>94.592720 56.112617</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0949</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96756</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.002456 58.026306</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин Виват</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96760</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.799467 47.323090</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2228</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96762</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.892861 51.309383</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 9172</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96768</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.246945 51.665659</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1134</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96770</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>20.497051 54.717603</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1041</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96774</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.524048 50.256753</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4201</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96754</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>134.746855 47.534584</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2239</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96750</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.570020 55.761493</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1133</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96728</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>41.320117 56.359524</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Ассорти&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96734</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>98.029009 55.934906</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5939</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96740</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.729893 46.962310</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Океан</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96744</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.290140 57.819359</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1051</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96746</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>136.966933 50.547709</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Универсам&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96722</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.583646 51.846027</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4936</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101392</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.165109 43.396354</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Международный Аэропорт Владивосток</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101378</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>21.898298 55.081397</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8058</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101288</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.545647 55.421739</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7696</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101264</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.307886 59.927478</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8057</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101232</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.563842 50.255130</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4230</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101342</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>45.965715 51.588115</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;АТРИО&quot; - ЦДО ГО Саратов</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101330</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.480265 52.040220</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3939</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101148</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.628996 55.746450</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1142</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101122</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>50.818019 61.664094</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7060</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96720</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.082637 48.490161</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Магазин радости</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96716</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.235213 58.003197</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Семь пятниц</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96710</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>38.919234 55.580454</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1150</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96706</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>31.266629 58.535034</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1018</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96704</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.587563 53.071810</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Шамса</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96700</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>102.496578 53.553177</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5941</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96690</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.235729 52.313541</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Гипермаркет &quot;Окей&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96688</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.928639 43.169387</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3203</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96684</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>21.807853 54.634550</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8049</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96678</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.749308 46.931139</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2224</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96672</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>19.905022 54.650303</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1048</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96670</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.411797 53.211068</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1140</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96668</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.118944 56.578324</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5935</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96664</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>121.627358 63.751711</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2269</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96660</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.880148 49.794256</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4214</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96654</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>45.149955 54.170801</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 9234</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96652</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.350051 43.110490</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3223</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96650</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.250283 58.000840</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Гостиный Двор&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96646</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.059682 48.474381</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2288</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96644</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.240459 60.039257</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>К-РУОКА</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96640</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.130555 48.431096</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0232</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96636</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.950611 43.800203</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3216</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96632</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.267366 62.203426</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1086</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96628</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.076470 44.421796</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3238</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96626</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>115.693859 50.872380</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3914</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96620</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.889127 43.115303</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3202</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96622</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.485714 52.055669</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3903</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96618</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>32.936679 67.936432</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1026</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96616</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>41.312654 56.355223</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1141</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96610</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.120490 59.566287</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1028</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96612</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.240402 58.000176</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1203</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96608</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.343293 57.807237</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1009</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96604</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.732090 46.958946</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2255</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96602</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>20.483897 54.721100</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8038</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96596</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.889127 43.115303</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3202</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96594</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.356506 52.252904</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5911</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96592</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.752280 46.939189</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Зодчий&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96588</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.891014 52.535505</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5915</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96586</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>133.119867 43.116748</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3228</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96584</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>105.744666 56.779977</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5928</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96582</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>55.939716 58.003664</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТД Строймастер</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96568</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.966910 43.093193</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3208</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96564</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.712667 62.025054</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2259</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96560</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>45.188056 54.186151</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7299</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96552</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.234520 58.004765</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Отделение глазных болезней Областной клинической больницы</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96548</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>34.387625 61.781312</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1090</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96550</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.950682 53.329017</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0948</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96544</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>128.478594 50.918124</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4209</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96538</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.739961 62.031508</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2262</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96536</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.986408 55.928175</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1168</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96532</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.667110 52.000140</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4216</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96534</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.048624 47.048630</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2229</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96522</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.353133 58.062909</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Солнечный</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96512</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>133.733753 45.933044</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3226</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96510</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.911380 43.154519</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3210</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96494</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.748763 46.955266</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2227</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96492</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.618918 56.152156</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5921</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96490</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.941571 48.778709</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Великан&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96486</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>53.678708 63.561322</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7089</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96484</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.495202 52.040819</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96482</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.589959 51.826338</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96480</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.620750 55.763865</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1111</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96476</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.117943 48.506753</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0256</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96472</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.174789 57.974687</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1285</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96474</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>143.098261 49.222559</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2230</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96466</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.598283 55.744772</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1131</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96458</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>94.430620 51.717185</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2986</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96454</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.088691 59.119579</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1057</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96444</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.104621 48.397105</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Южный парк&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96436</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.712667 62.025054</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2259</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96430</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>106.864667 52.004836</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4911</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96432</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>116.532118 50.392341</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3911</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96428</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>102.737658 57.951583</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5924</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96418</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.777402 46.630207</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2226</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96416</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.744186 51.865743</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4904</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96412</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.819567 44.599817</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3230</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96408</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.525643 58.191262</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0923</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96406</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.186864 51.758043</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8126</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96402</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.450428 53.718178</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0940</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96394</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.421904 69.074399</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1045</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96396</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>137.002553 50.547536</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0253</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96392</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.401891 52.932074</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2236</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96388</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.273261 52.242491</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5907</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96386</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>118.034234 50.091172</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3912</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96382</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.448531 52.033134</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3908</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96378</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.723617 62.021879</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2257</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96374</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.643545 51.807900</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4905</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96370</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>38.134160 56.319106</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1144</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96372</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.382339 53.192399</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2218</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96368</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.906220 59.127631</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1033</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96358</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.406355 58.084700</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Корзинка&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96356</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.647490 53.020757</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2219</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96344</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.276611 53.753172</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4215</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96336</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.883999 59.219841</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1066</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96332</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.869784 52.515184</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5917</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96326</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>40.540265 64.534494</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1003</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96322</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>46.642603 61.244626</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7037</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96324</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.915555 43.093180</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3204</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96320</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.734535 46.958109</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2256</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96316</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>28.603086 59.372133</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1058</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96318</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>127.535714 50.263634</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4224</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96308</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.575419 44.342772</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3233</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96306</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.324314 52.255658</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Административное здание\Байкальская</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96304</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.396235 58.149598</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Психиатрическая больница</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96302</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.391446 52.069515</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3906</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96298</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.412326 53.099338</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0946</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96294</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>136.996522 50.538721</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0229</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96292</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.171956 52.351043</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5904</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96288</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>29.850083 58.738858</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7075</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96282</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.753600 52.807348</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5950</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96280</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.885420 43.114163</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3201</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96276</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>137.060891 50.589566</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0230</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96274</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>104.313055 52.278312</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5913</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96258</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.106274 48.415608</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Автономная зона 24</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96250</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.614367 55.741083</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>БЦ Александр Хаус</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96246</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.061015 48.486706</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0202</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96240</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.708429 55.753838</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Московский энергетический институт</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96234</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.598970 51.838625</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96232</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.703723 47.235568</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1319</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96230</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.737443 46.941059</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Рояль&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96228</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>114.538869 51.107775</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3915</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96224</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.098401 48.497453</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Большая Медведица&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96214</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>54.662643 59.012509</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1225</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96208</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.041601 48.541869</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0263</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96206</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>33.089684 68.974864</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 7095</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96202</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.945427 56.045722</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0924</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96200</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.068617 48.478244</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0201</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96192</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>40.807665 64.418760</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1083</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96186</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.906788 43.151021</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3206</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96184</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.957288 43.789291</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3215</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96176</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.069886 48.471553</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Бизнес Центр &quot;Хабаровск Сити&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96154</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.880477 56.016541</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ЗАО Страховое общество &quot;Надежда&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96150</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.185331 48.458421</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0257</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96142</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>140.283601 48.964241</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0244</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96136</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>93.523806 56.249140</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0928</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96138</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.113002 48.392740</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0220</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96128</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.081662 53.147099</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5936</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96126</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.886278 43.115967</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Центральный&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96124</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.941783 57.430772</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1224</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96116</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.182863 51.663386</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1163</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96114</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.442235 50.110441</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4219</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96110</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>87.151334 53.759481</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0992</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96108</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.495202 52.040819</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3900</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96106</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.726025 46.963547</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Калинка&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96096</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.318468 59.927894</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1031</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96098</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>125.381827 58.607992</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2268</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96094</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.899915 43.127523</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3214</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96090</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.553151 44.546648</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3231</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96088</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.659231 52.751618</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5927</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96086</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.404991 49.792734</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4211</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96084</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.616277 56.147104</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5920</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96080</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>36.568582 50.565710</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Семейный&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96074</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>93.541472 56.241666</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Центральный рынок</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96066</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>133.391605 45.465963</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3225</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96058</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>90.405808 56.012248</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0913</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96050</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>134.253468 46.823989</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2201</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96048</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>30.563288 59.750114</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1056</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96044</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>88.194556 69.351525</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0906</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96038</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.929249 56.064108</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0952</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96036</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.113002 48.392740</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0220</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96024</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>20.482101 54.682181</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1073</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96022</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.119105 48.471021</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Южнопортовый</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96016</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>132.931594 48.791220</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 0206</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96010</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>55.750633 58.084158</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1226</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96008</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.790548 56.020532</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0963</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96004</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>82.927890 55.026863</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2902</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96000</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.108188 48.451525</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0255</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>96002</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>38.449828 55.887289</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 1167</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95994</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.038957 48.366465</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2211</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95992</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.741268 62.031595</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2258</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95984</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>43.919998 56.273638</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 1200</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95982</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.091240 48.457510</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 0200</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95976</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>158.662843 53.035885</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2237</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95974</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.099700 48.398091</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0212</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95972</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>107.603632 51.809275</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 4928</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95966</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>101.891769 56.287527</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5923</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95956</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>140.721086 53.140171</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2208</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95952</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>129.740902 62.083463</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5213</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95950</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>56.232022 57.972292</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ </gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95946</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>135.049412 48.514817</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ &quot;Самбери&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95944</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>37.591941 55.772882</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 1102</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95936</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.958220 56.009507</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0919</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95932</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.175813 58.455347</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 0981</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95928</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>39.707639 47.219204</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Филиал 1300</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95924</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>88.395065 69.483919</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Магазин &quot;Планета&quot;</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>98812</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.982709 43.809538</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3216</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>95926</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>73.388106 54.950128</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 6999</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101410</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.907072 56.028594</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8503</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101428</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>92.911760 56.058474</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8502</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101430</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>60.601657 56.857549</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8825</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101452</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>142.748525 46.931117</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>ТЦ Сити-Молл</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101490</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>55.955452 58.003558</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 9554</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101492</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.885786 43.118349</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2613</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101520</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>113.495827 52.022151</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 3940</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101524</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>90.522364 56.302608</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8509</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101586</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>95.708883 56.228777</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8507</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101588</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>131.908196 43.132716</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 2617</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101644</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>91.426874 53.744007</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 8508</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101656</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>103.887599 52.545704</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Операционный офис 5960</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101660</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>96.066179 56.235924</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 8511</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101688</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+  <gml:featureMember>
+   <ymaps:GeoObject>
+    <ymaps:style>#atm</ymaps:style>
+    <gml:Point>
+     <gml:pos>136.990633 50.547461</gml:pos>
+    </gml:Point>
+    <gml:name>Ориентир:</gml:name>
+    <gml:description>Дополнительный офис 2626</gml:description>
+    <gml:metaDataProperty>
+     <ymaps:AnyMetaData>
+      <nid>101754</nid>
+     </ymaps:AnyMetaData>
+    </gml:metaDataProperty>
+   </ymaps:GeoObject>
+  </gml:featureMember>
+ </ymaps:GeoObjectCollection>
+</ymaps:ymaps>

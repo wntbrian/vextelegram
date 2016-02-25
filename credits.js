@@ -35,7 +35,7 @@ request({
 });
     //return creditcards;
 function updateDB(data) {
-    MongoClient.connect('mongodb://127.0.0.1:27017/credits', function (err, db) {
+    MongoClient.connect('mongodb://127.0.0.1:27017/vexbot', function (err, db) {
         if (err) throw err;
         //console.log("Connected to Database");
         //simple json record

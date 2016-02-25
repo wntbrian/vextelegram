@@ -1,13 +1,23 @@
-var rss_reader = require("./rssfeed.js");
-var vost_news="http://www.vostbank.ru/news/feed/";
-var vost_youtube="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
-var news_json = rss_reader.rss(vost_news);
-//var yt_json = rss_reader.rss(vost_youtube);
-require("./rssfeed.js").rss(vost_youtube,function (json,err) {
-    console.log(json);
-});
-require("./rssfeed.js").rss(vost_news,function (json,err) {
-    console.log(json);
-});
+var MongoClient = require('mongodb').MongoClient
+  , format = require('util').format;
+var mongourl = "mongodb://127.0.0.1:27017/credits";
 
 
+var findCreditCard = function(db, callback) {
+  var cursor = db.collection('credits').find( ).toArray(function (err, result) {
+    if (err) {
+      console.log(err);
+    } else if (result.length) {
+      console.log('Found:', result);
+    } else {
+      console.log('No document(s) found with defined "find" criteria!');
+    }
+    //Close connection
+    db.close();
+  });
+};
+MongoClient.connect(mongourl, function(err, db) {
+  findCreditCard(db, function() {
+    db.close();
+  });
+});
