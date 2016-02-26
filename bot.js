@@ -124,14 +124,18 @@ bot.on('message', function (msg) {
 function vb_curs(msg){
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
-  var resp = "Курс валют на "+curs.update+"\n \n";
+  var resp = "Курс валют на " + curs.update + "\n \n";
 
+  resp += "Для отделений г. Хабаровск \n \n";
   for (var atr in curs.bank_currency){
-    resp += atr + ": \n" +
-    " покупка " + curs.bank_currency[atr].buy + "\n" +
-    " продажа " + curs.bank_currency[atr].sell + "\n" +
-    " курс ЦБ" +  curs.bank_currency[atr].cb + "\n \n";
+    resp += atr + "\n" +
+    " • покупка   " + curs.bank_currency[atr].buy + "\n" +
+    " • продажа   " + curs.bank_currency[atr].sell + "\n \n";
   }
+  resp += "Курсы ЦБ \n \n";
+    for (var atr in curs.bank_currency){
+        resp += atr + "   " + curs.bank_currency[atr].cb + "\n";
+    }
   bot.sendMessage(fromId,resp,menu.main);
 }
 function vb_procent(msg){
