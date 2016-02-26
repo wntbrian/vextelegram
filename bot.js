@@ -198,13 +198,7 @@ function vb_table(msg){
 function vb_atm_near(msg)
 {
   var fromId = msg.from.id;
-  var opts = {
-    reply_markup: JSON.stringify(
-      {
-        force_reply: true
-      }
-    )};
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
@@ -236,7 +230,7 @@ function vb_office_near(msg)
         force_reply: true
       }
     )};
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
@@ -276,14 +270,18 @@ var findCreditCard = function(db,fromId, callback) {
     } else if (result.length) {
         var resp = "";
         for (var atr in result){
-            resp += "["+result[atr].title+"]("+result[atr].link+")\n"+result[atr].desc+"\n";
+            resp +="["+result[atr].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[atr].link.trim()+")\n";
+            //resp += "/info"+atr+" "+result[atr].title.trim()+"\n";
         };
-        bot.sendMessage(fromId,resp,menu.none);
-      //var int = randomInt(0,result.length-1);
-      //resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
-      //resp += "\n";
-      //resp += result[int].desc;
-      //bot.sendMessage(fromId,resp,menu.main);
+        bot.sendMessage(fromId,resp,menu.none)
+        //bot.sendMessage(fromId, '/rest', menu.reply)
+        //    .then(function (sended) {
+        //        var chatId = sended.chat.id;
+        //        var messageId = sended.message_id;
+        //        bot.onReplyToMessage(chatId, messageId, function (message) {
+        //                    bot.sendMessage(chatId,"ответ",menu.none)
+        //        });
+        //    });
     } else {
       console.log('No document(s) found with defined "find" criteria!');
     }
