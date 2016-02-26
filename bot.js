@@ -20,8 +20,8 @@ var vost_news="http://www.vostbank.ru/news/feed/";
 var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA";
 ////
 var menu = require("./json/menu.json");
-var credit = require("./credits.js");
-var credit = require("./deposits.js");
+require("./credits.js");
+require("./deposits.js");
 var news_json;
 var yt_json;
 require("./rssfeed.js").rss(vost_youtube,function (json,err) {
@@ -198,13 +198,7 @@ function vb_table(msg){
 function vb_atm_near(msg)
 {
   var fromId = msg.from.id;
-  var opts = {
-    reply_markup: JSON.stringify(
-      {
-        force_reply: true
-      }
-    )};
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
@@ -236,7 +230,7 @@ function vb_office_near(msg)
         force_reply: true
       }
     )};
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
@@ -274,11 +268,20 @@ var findCreditCard = function(db,fromId, callback) {
     if (err) {
       console.log(err);
     } else if (result.length) {
-      var int = randomInt(0,result.length-1);
-      resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
-      resp += "\n";
-      resp += result[int].desc;
-      bot.sendMessage(fromId,resp,menu.main);
+        var resp = "";
+        for (var atr in result){
+            resp +="["+result[atr].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[atr].link.trim()+")\n";
+            //resp += "/info"+atr+" "+result[atr].title.trim()+"\n";
+        };
+        bot.sendMessage(fromId,resp,menu.none)
+        //bot.sendMessage(fromId, '/rest', menu.reply)
+        //    .then(function (sended) {
+        //        var chatId = sended.chat.id;
+        //        var messageId = sended.message_id;
+        //        bot.onReplyToMessage(chatId, messageId, function (message) {
+        //                    bot.sendMessage(chatId,"ответ",menu.none)
+        //        });
+        //    });
     } else {
       console.log('No document(s) found with defined "find" criteria!');
     }

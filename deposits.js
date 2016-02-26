@@ -1,5 +1,5 @@
-//var MongoClient = require('mongodb').MongoClient
-//  , format = require('util').format;
+var MongoClient = require('mongodb').MongoClient
+  , format = require('util').format;
 
 var request = require("request");
 var cheerio = require("cheerio");
@@ -47,10 +47,16 @@ request({
             }
         });
         str += ' ]';
-        var creditcards = JSON.parse(str);
-    //    for (var card in creditcards) {
-      //      updateDB(creditcards[card]);
-        //};
+        var json_splitted = str.split("\n                ");
+        var json = "";
+        for(var id in json_splitted)
+        {
+            json += json_splitted[id];
+        }
+        var deposit = JSON.parse(json);
+        for (var id2 in deposit) {
+            updateDB(deposit[id2]);
+        };
 });
     //return creditcards;
 function updateDB(data) {
@@ -58,7 +64,7 @@ function updateDB(data) {
         if (err) throw err;
         //console.log("Connected to Database");
         //simple json record
-        var collection = db.collection('credits');
+        var collection = db.collection('deposit');
         collection.updateOne({"title": data.title}, {
             $set: {
                 "link": data.link,
