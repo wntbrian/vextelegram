@@ -1,7 +1,7 @@
 {
   "bank_currency": {
     "USD": {
-      "symbol": "?",
+      "symbol": "💵",
       "buy": 75.40,
       "sell": 79.40,
       "cb" : 77.7792
