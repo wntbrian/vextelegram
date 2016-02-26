@@ -15,19 +15,16 @@ var options = {
   }
 };
 ////
-var vost_news="http://www.vostbank.ru/news/feed/";
-//var vost_youtube_bryansk="http://www.youtube.com/feeds/videos.xml?channel_id=UCXmCnhbOs5JaDmIKkldTBWA";
-var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA";
-////
 var menu = require("./json/menu.json");
+var cont = require("./json/contacts.json");
 require("./credits.js");
 require("./deposits.js");
 var news_json;
 var yt_json;
-require("./rssfeed.js").rss(vost_youtube,function (json,err) {
+require("./rssfeed.js").rss(cont.rss.youtube_channel,function (json,err) {
   yt_json = json;
 });
-require("./rssfeed.js").rss(vost_news,function (json,err) {
+require("./rssfeed.js").rss(cont.rss.news_feed ,function (json,err) {
   news_json = json;
 });
 ///
@@ -116,18 +113,15 @@ bot.on('message', function (msg) {
 function vb_curs(msg){
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
-  var resp = "*Курс валют на " + curs.update + "*\n \n";
-
-  resp += "*Для отделений г. Хабаровск* \n";
+  var curs_office = "*Для отделений г. Хабаровск* \n";
+  var curs_cb = "\n*Курсы ЦБ* \n";
   for (var atr in curs.bank_currency){
-    resp += curs.bank_currency[atr].symbol + " " + atr + "\n" +
+      curs_office += curs.bank_currency[atr].symbol + " " + atr + "\n" +
     " • покупка   " + curs.bank_currency[atr].buy + "\n" +
     " • продажа   " + curs.bank_currency[atr].sell + "\n";
+      curs_cb += atr + "   " + curs.bank_currency[atr].cb + "\n";
   }
-  resp += "\n*Курсы ЦБ* \n";
-    for (var atr in curs.bank_currency){
-        resp += atr + "   " + curs.bank_currency[atr].cb + "\n";
-    }
+  var resp = "*Курс валют на " + curs.update + "*\n \n" + curs_office + curs_cb;
   bot.sendMessage(fromId,resp,menu.main);
 }
 
@@ -149,21 +143,23 @@ function vb_menu(msg){
 function vb_start(msg){
   
   var fromId = msg.from.id;
-  var resp = "Привет, меня зовут *Восточный БОТ* :) буду рад помочь!";
+  var resp = "Привет, меня зовут тестовый *Восточный БОТ* :) буду рад помочь!";
   bot.sendMessage(fromId,resp,menu.main);
 }
 function vb_contacts(msg){
-  
+  var contacts = require("./json/contacts.json");
   var fromId = msg.from.id;
-  var resp =
-    "☎ 8-800-100-7-100 \n"+
-    "[Официальный сайт](vostbank.ru) \n" +
-    "[Интернет-банк](online.vostbank.ru) \n"+
-    "◆ [Вконтакте](http://vk.com/vostbankru) \n" +
-    "◆ [Одноклассники](http://ok.ru/vostbank) \n" +
-    "◆ [Facebook](http://www.facebook.com/vostbank) \n" +
-    "◆ [Instagram](http://www.instagram.com/vostbank.ru) \n" +
-    "◆ [Twitter](http://twitter.com/vostbank)";
+  var resp = "";
+    for (var i in contacts.telephones ){
+        resp += contacts.telephones[i].title + " " + contacts.telephones[i].numb + "\n";
+    };
+    for (var i in contacts.main_url ){
+        resp += "[" + contacts.main_url[i].title + "](" + contacts.main_url[i].numb + ")\n";
+    };
+    resp += "*Мы в социальных сетях*"
+    for (var i in contacts.social_url ){
+        resp += "• [" + contacts.social_url[i].title + "](" + contacts.social_url[i].numb + ")\n";
+    };
   bot.sendMessage(fromId,resp,menu.main);
 }
 function vb_twitter(msg){
