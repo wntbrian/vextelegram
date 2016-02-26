@@ -57,46 +57,6 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
   var resp = match[1];
   bot.sendMessage(fromId, resp);
 });
-//bot.onText(/\/start/, function (msg, match) {
-//  vb_start(msg);
-//});
-//bot.onText(/\Меню/, function (msg, match) {
-//  vb_menu(msg);
-//});
-//bot.onText(/\Курсы валют/, function (msg, match) {
-//  vb_curs(msg);
-//});
-//bot.onText(/\Подарки и бонусы/, function (msg, match) {
-//  vb_present_bonus(msg);
-//});
-//bot.onText(/\Проценты в подарок/, function (msg, match) {
-//  vb_procent(msg);
-//});
-//bot.onText(/\Бонус за покупки/, function (msg, match) {
-//
-//});
-//bot.onText(/\Кредитные каникулы/, function (msg, match) {
-//  vb_credit_vacation(msg);
-//});
-//bot.onText(/\Рекомендация/, function (msg, match) {
-//   vb_recom(msg);
-//});
-//bot.onText(/\Контакты/, function (msg, match) {
-//  vb_contacts(msg);
-//});
-//bot.onText(/\Twitter/, function (msg, match) {
-//  vb_twitter(msg);
-//});
-//bot.onText(/\Новости/, function (msg, match) {
-//  vb_news(msg);
-//});
-//bot.onText(/\таблица/, function (msg, match) {
-//    vb_table(msg);
-//});
-//bot.onText(/\Карты/, function (msg, match) {
-//  vb_credit_cards(msg);
-//});
-// Any kind of message
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
@@ -108,9 +68,6 @@ bot.on('message', function (msg) {
           break;
         case "Карты":
           vb_credit_cards(msg);
-          break;
-        case "таблица":
-          vb_table(msg);
           break;
         case "Новости":
           vb_news(msg);
@@ -167,13 +124,13 @@ bot.on('message', function (msg) {
 function vb_curs(msg){
   var curs = require("./json/currency.json");
   var fromId = msg.from.id;
-  var resp = "Курс валют на "+curs.update+"\n";
-  //resp += "```ВАЛЮТА    ПОКУПКА   ПРОДАЖА   ЦБ```";
+  var resp = "Курс валют на "+curs.update+"\n \n";
+
   for (var atr in curs.bank_currency){
-    resp += "```" + atr + "  " +
-    curs.bank_currency[atr].buy  + " / " +
-    curs.bank_currency[atr].sell + " (" +
-    curs.bank_currency[atr].cb + ")```";
+    resp += atr + ": \n" +
+    " покупка " + curs.bank_currency[atr].buy + "\n" +
+    " продажа " + curs.bank_currency[atr].sell + "\n" +
+    " курс ЦБ" +  curs.bank_currency[atr].cb + "\n \n";
   }
   bot.sendMessage(fromId,resp,menu.main);
 }
