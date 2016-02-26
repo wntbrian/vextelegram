@@ -136,7 +136,7 @@ function vb_bonus(msg){
   var resp = "";
 
   for (var atr in bonuses){
-        resp += "["+bonuses.title+"]("+bonuses.link+")\n"+bonuses.desc+"\n";
+        resp += "["+bonuses[atr].title+"]("+bonuses[atr].link+")\n"+bonuses[atr].desc+"\n";
     };
   bot.sendMessage(fromId,resp,menu.none);
 }
