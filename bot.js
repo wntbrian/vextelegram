@@ -20,7 +20,8 @@ var vost_news="http://www.vostbank.ru/news/feed/";
 var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA";
 ////
 var menu = require("./json/menu.json");
-var credit = require("./credits.js");
+require("./credits.js");
+require("./deposits.js");
 var news_json;
 var yt_json;
 require("./rssfeed.js").rss(vost_youtube,function (json,err) {
@@ -273,11 +274,16 @@ var findCreditCard = function(db,fromId, callback) {
     if (err) {
       console.log(err);
     } else if (result.length) {
-      var int = randomInt(0,result.length-1);
-      resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
-      resp += "\n";
-      resp += result[int].desc;
-      bot.sendMessage(fromId,resp,menu.main);
+        var resp = "";
+        for (var atr in result){
+            resp += "["+result[atr].title+"]("+result[atr].link+")\n"+result[atr].desc+"\n";
+        };
+        bot.sendMessage(fromId,resp,menu.none);
+      //var int = randomInt(0,result.length-1);
+      //resp = "["+result[int].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[int].link.trim()+")";
+      //resp += "\n";
+      //resp += result[int].desc;
+      //bot.sendMessage(fromId,resp,menu.main);
     } else {
       console.log('No document(s) found with defined "find" criteria!');
     }
