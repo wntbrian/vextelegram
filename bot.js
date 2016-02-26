@@ -66,47 +66,38 @@ bot.on('message', function (msg) {
         case "/start":
           vb_start(msg);
           break;
-        case "Карты":
-          vb_credit_cards(msg);
+        case "Меню":
+          vb_menu(msg);
           break;
-        case "Новости":
-          vb_news(msg);
+        case "Банкоматы":
+          vb_atm_near(msg);
           break;
-        case "Twitter":
-          vb_twitter(msg);
+        case "Отделения":
+          vb_office_near(msg);
           break;
         case "Контакты":
           vb_contacts(msg);
           break;
-        case "Рекомендация":
-          vb_recom(msg);
+        case "Новости":
+          vb_news(msg);
           break;
-        case "Кредитные каникулы":
-          vb_credit_vacation(msg);
+        case "Youtube":
+          vb_youtube(msg);
           break;
-        case "Бонус за покупки":
-          vb_bonus(msg);
-          break;
-        case "Подарки и бонусы":
-          vb_bonus_menu(msg);
+        case "Twitter":
+          vb_twitter(msg);
           break;
         case "Курсы валют":
           vb_curs(msg);
           break;
-        case "Меню":
-          vb_menu(msg);
+        case "Кредитные карты":
+          vb_credit_cards(msg);
           break;
-        case "Проценты в подарок":
-          vb_procent(msg);
+        case "Вклады":
+          vb_deposits(msg);
           break;
-        case "youtube":
-          vb_youtube(msg);
-          break;
-        case "Банкомат":
-          vb_atm_near(msg);
-          break;
-        case "Офис":
-          vb_office_near(msg);
+        case "Специальные предложения":
+          vb_bonus(msg);
           break;
         default:
           bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
@@ -138,24 +129,15 @@ function vb_curs(msg){
     }
   bot.sendMessage(fromId,resp,menu.main);
 }
-function vb_procent(msg){
+
+function vb_bonus(msg){
+  var bonuses = require("./json/bonus.json");
   var fromId = msg.from.id;
-  var resp = "В благодарность за выбор и оказанное доверие " +
-    "Восточный экспресс банк дарит своим лучшим клиентам повышенную ставку по вкладу до +0,5% \n" +
-    "[Узнать подробности](http://www.vostbank.ru/moscow/action/percent-gift)";
-  bot.sendMessage(fromId,resp,menu.none);
-}
-function vb_bonus_menu(msg){
-  var fromId = msg.from.id;
-  var resp = "Узнайте о наших акциях";
-  bot.sendMessage(fromId,resp,menu.bonus);
-}
-function vb_bonus(msg)
-{
-  var fromId = msg.from.id;
-  var resp = "Программа поощрения держалелей банковских карт \"*Visa Platinum - VIP Сберегательный*\" \n" +
-    "[Условия бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_prilozgenie_vkl.pdf) \n" +
-    "[Правила бонусной программы](http://www.vostbank.ru/sites/default/files/doc/vip/cards/Cash_Back_pravila.pdf)";
+  var resp = "";
+
+  for (var atr in bonuses){
+        resp += "["+bonuses.title+"]("+bonuses.link+")\n"+bonuses.desc+"\n";
+    };
   bot.sendMessage(fromId,resp,menu.none);
 }
 function vb_menu(msg){
@@ -166,27 +148,8 @@ function vb_menu(msg){
 function vb_start(msg){
   
   var fromId = msg.from.id;
-  var resp = "Привет, я *бот* конкурса ВЭБ";
+  var resp = "Привет, меня зовут *Восточный БОТ* :) буду рад помочь!";
   bot.sendMessage(fromId,resp,menu.main);
-}
-function vb_credit_vacation(msg){
-  
-  var fromId = msg.from.id;
-  var resp = "В жизни каждого человека бывают моменты, когда сложно своевременно внести вовремя платеж по кредиту." +
-    " В какой бы сложной ситуации вы бы не оказались, с опцией «*Кредитные каникулы*» Вы будете уверены " +
-    "в завтрашнем дне, ведь банк может предоставить отсрочку по внесению выплат в погашение основного долга по кредиту. \n" +
-    "[Узнать подробности](http://www.vostbank.ru/page/kreditnye-kanikuly) \n" +
-    "☎ 8-800-100-7-100";
-  bot.sendMessage(fromId,resp,menu.none);
-}
-function vb_recom(msg){
-  
-  var fromId = msg.from.id;
-  var resp = "Теперь вы можете рекомендовать наш банк своим друзьям, родственникам, знакомым и получать подарки от банка. " +
-    "Подарок для вас за рекомендацию - 1000 бонусов на счет." +
-    "Подарок для друга - 500 бонусов за оформленный кредит или кредитную карту в нашем банке по вашей рекомендации. \n" +
-    "[Узнать подробности](http://www.vostbank.ru/moscow/private/podarki-i-bonusy/privodite-druzei-i-poluchaite-podarki)";
-  bot.sendMessage(fromId,resp,menu.none);
 }
 function vb_contacts(msg){
   
@@ -240,7 +203,7 @@ function vb_atm_near(msg)
         force_reply: true
       }
     )};
-  bot.sendMessage(msg.from.id, 'Найти банкомат?', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
@@ -272,7 +235,7 @@ function vb_office_near(msg)
         force_reply: true
       }
     )};
-  bot.sendMessage(msg.from.id, 'Найти ближайший офис?', opts)
+  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', opts)
     .then(function (sended) {
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
