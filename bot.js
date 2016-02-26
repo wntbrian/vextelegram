@@ -154,7 +154,7 @@ function vb_contacts(msg){
         resp += contacts.telephones[i].title + " " + contacts.telephones[i].numb + "\n";
     };
     for (var i in contacts.main_url ){
-        resp += "[" + contacts.main_url[i].title + "](" + contacts.main_url[i].link + ")\n";
+        resp += i + " [" + contacts.main_url[i].title + "](" + contacts.main_url[i].link + ")\n";
     };
     resp += "\n*Мы в социальных сетях*\n"
     for (var i in contacts.social_url ){
