@@ -1,37 +1,39 @@
-var MongoClient = require('mongodb').MongoClient
-  , format = require('util').format;
-var mongourl = "mongodb://127.0.0.1:27017/vexbot";
+var TelegramBot = require('node-telegram-bot-api');
+var token = process.env.bottoken;
 
-
-var findNearAtm = function(db,coord, callback) {
-    db.collection('atm').find(
-        {
-            loc:
-            { $near :
-            {
-                $geometry: { type: "Point",  coordinates: coord },
-                $minDistance: 0,
-                $maxDistance: 5000
-            }
-            }
-        }
-    ).toArray(function (err, result) {
-        if (err) {
-            console.log(err);
-        } else if (result.length) {
-            console.log(result[0].loc.coordinates);
-            console.log(result[0].desc);
-        } else {
-            console.log('No document(s) found with defined "find" criteria!');
-        }
-        //Close connection
-        db.close();
-    });
+var options = {
+  webHook: {
+    port: 8080
+    //key: __dirname+'/key.pem',
+    //cert: __dirname+'/crt.pem'
+  }
 };
-var coord = [30.355158, 59.918843];
+var bot = new TelegramBot(token, options);
+bot.setWebHook(process.env.webhookurl+"/"+token);
+var opts = {
+  reply_markup: JSON.stringify(
+    {
+      force_reply: true
+    }
+  )};
+bot.on('message', function (msg) {
+  if ( typeof msg.reply_to_message == "undefined") {
+    bot.sendMessage(msg.from.id, 'How old are you?', opts)
+      .then(function (sended) {
+        var chatId = sended.chat.id;
+        var messageId = sended.message_id;
+        bot.onReplyToMessage(chatId, messageId, function (message) {
+          console.log('User is %s years old', message.text);
+          bot.sendMessage(msg.from.id, "You say: "+message.text);
+        });
+      });
+  }
+  else{
+    //if (msg.reply_to_message.text == "How old are you?"){
+    //  bot.sendMessage(msg.from.id, "You say: "+msg.text);
+    //}
+  }
 
-MongoClient.connect(mongourl, function(err, db) {
-    findNearAtm(db, coord, function() {
-    db.close();
-  });
+
+
 });

@@ -100,67 +100,65 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
-    if(typeof msg.location !== "undefined")
-    {
-        vb_atm_near(msg);
+  if ( typeof msg.reply_to_message == "undefined") {
+    if (typeof msg.text !== "undefined") {
+      switch (msg.text) {
+        case "/start":
+          vb_start(msg);
+          break;
+        case "Карты":
+          vb_credit_cards(msg);
+          break;
+        case "таблица":
+          vb_table(msg);
+          break;
+        case "Новости":
+          vb_news(msg);
+          break;
+        case "Twitter":
+          vb_twitter(msg);
+          break;
+        case "Контакты":
+          vb_contacts(msg);
+          break;
+        case "Рекомендация":
+          vb_recom(msg);
+          break;
+        case "Кредитные каникулы":
+          vb_credit_vacation(msg);
+          break;
+        case "Бонус за покупки":
+          vb_bonus(msg);
+          break;
+        case "Подарки и бонусы":
+          vb_bonus_menu(msg);
+          break;
+        case "Курсы валют":
+          vb_curs(msg);
+          break;
+        case "Меню":
+          vb_menu(msg);
+          break;
+        case "Проценты в подарок":
+          vb_procent(msg);
+          break;
+        case "youtube":
+          vb_youtube(msg);
+          break;
+        case "Банкомат":
+          vb_atm_near(msg);
+          break;
+        case "Офис":
+          vb_office_near(msg);
+          break;
+        default:
+          bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
+        // TODO добавить меню для банкоматов
+        // TODO добавить меню для кредитных карт
+        // TODO добавить меню для отделений
+      }
     }
-
-    if(typeof msg.text !== "undefined")
-    {
-        switch (msg.text) {
-            case "/start":
-                vb_start(msg);
-                break;
-            case "Карты":
-                vb_credit_cards(msg);
-                break;
-            case "таблица":
-                vb_table(msg);
-                break;
-            case "Новости":
-                vb_news(msg);
-                break;
-            case "Twitter":
-                vb_twitter(msg);
-                break;
-            case "Контакты":
-                vb_contacts(msg);
-                break;
-            case "Рекомендация":
-                vb_recom(msg);
-                break;
-            case "Кредитные каникулы":
-                vb_credit_vacation(msg);
-                break;
-            case "Бонус за покупки":
-                vb_bonus(msg);
-                break;
-            case "Подарки и бонусы":
-                vb_procent(msg);
-                break;
-            case "Курсы валют":
-                vb_curs(msg);
-                break;
-            case "Меню":
-                vb_menu(msg);
-                break;
-            case "Проценты в подарок":
-                vb_procent(msg);
-                break;
-            case "youtube":
-                vb_youtube(msg);
-                break;
-            case "Банкомат":
-                vb_atm_near(msg);
-                break;
-            default:
-                bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
-// TODO добавить меню для банкоматов
-            // TODO добавить меню для кредитных карт
-            // TODO добавить меню для отделений
-    }
-
-    }
+  }
     // photo can be: a file path, a stream or a Telegram file_id
     //var photo = 'cat.jpg';
 
@@ -186,7 +184,7 @@ function vb_procent(msg){
     "[Узнать подробности](http://www.vostbank.ru/moscow/action/percent-gift)";
   bot.sendMessage(fromId,resp,menu.none);
 }
-function vb_present_bonus(msg){
+function vb_bonus_menu(msg){
   var fromId = msg.from.id;
   var resp = "Узнайте о наших акциях";
   bot.sendMessage(fromId,resp,menu.bonus);
@@ -274,27 +272,67 @@ function vb_table(msg){
 }
 function vb_atm_near(msg)
 {
-    var fromId = msg.from.id;
-    bot.sendMessage(fromId, 'Вышли мне координаты', menu.reply)
-        .then(function (sended) {
-            var chatId = sended.chat.id;
-            var messageId = sended.message_id;
-            bot.onReplyToMessage(chatId, messageId, function (message) {
-                MongoClient.connect(mongourl, function(err, db) {
-                    findNearAtm(db,message.location,fromId, function() {
-                        db.close();
-                    });
-                });
+  var fromId = msg.from.id;
+  var opts = {
+    reply_markup: JSON.stringify(
+      {
+        force_reply: true
+      }
+    )};
+  bot.sendMessage(msg.from.id, 'Найти банкомат?', opts)
+    .then(function (sended) {
+      var chatId = sended.chat.id;
+      var messageId = sended.message_id;
+      bot.onReplyToMessage(chatId, messageId, function (message) {
+        if (typeof message.location !== "undefined") {
+          MongoClient.connect(mongourl, function (err, db) {
+            findNearAtm(db, message.location, fromId, function () {
+              db.close();
             });
-        });
+          });
+        }else
+        {
+          MongoClient.connect(mongourl, function (err, db) {
+            findNearAtm(db, [30.35515,59.91884], fromId, function () {
+              db.close();
+            });
+          });
+        }
+      });
+    });
   // TODO расширить список банкоматов на 2 или 3
-
- // SELECT id,
- // ( 6371 * acos( cos( radians(43.866379) ) * cos( radians( lat ) ) * cos( radians( lng ) — radians(56.347038) ) + sin( radians(43.866379) ) * sin( radians( lat ) ) ) ) AS distance
- // FROM markers
- // HAVING distance < 25
- // ORDER BY distance
- // LIMIT 0 , 20;
+}
+function vb_office_near(msg)
+{
+  var fromId = msg.from.id;
+  var opts = {
+    reply_markup: JSON.stringify(
+      {
+        force_reply: true
+      }
+    )};
+  bot.sendMessage(msg.from.id, 'Найти ближайший офис?', opts)
+    .then(function (sended) {
+      var chatId = sended.chat.id;
+      var messageId = sended.message_id;
+      bot.onReplyToMessage(chatId, messageId, function (message) {
+        if (typeof message.location !== "undefined") {
+          MongoClient.connect(mongourl, function (err, db) {
+            findNearOffice(db, message.location, fromId, function () {
+              db.close();
+            });
+          });
+        }else
+        {
+          MongoClient.connect(mongourl, function (err, db) {
+            findNearOffice(db, [30.35515,59.91884], fromId, function () {
+              db.close();
+            });
+          });
+        }
+      });
+    });
+  // TODO расширить список банкоматов на 2 или 3
 }
 // TODO добавить объекты офисов
 function vb_credit_cards(msg)
@@ -324,29 +362,74 @@ var findCreditCard = function(db,fromId, callback) {
   });
 };
 var findNearAtm = function(db,coord,fromId, callback) {
-    db.collection('atm').find(
+  if(typeof coord !== "undefined") {
+    db.collection('atm').aggregate([
         {
-            loc:
-            { $near :
-            {
-                $geometry: { type: "Point",  coordinates: coord },
-                $minDistance: 0,
-                $maxDistance: 5000
-            }
-            }
+          "$geoNear": {
+            "near": {
+              "type": "Point",
+              "coordinates": coord
+            },
+            "distanceField": "distance",
+            "maxDistance": 5000,
+            "spherical": true,
+            "query": {"loc.type": "Point"}
+          }
+        },
+        {
+          "$sort": {"distance": 1} // Sort the nearest first
         }
-    ).toArray(function (err, result) {
+      ],
+      function (err, result) {
         if (err) {
-            console.log(err);
+          console.log(err);
         } else if (result.length) {
-            //console.log(result[0].loc.coordinates);
-            var resp = "Ближайший банкомат к вам: "+ result[0].desc;
-            bot.sendMessage(fromId,resp,menu.main);
-            bot.sendLocation(fromId,result[0].loc.coordinates[1],result[0].loc.coordinates[0],menu.main);
+          //console.log(result[0].loc.coordinates);
+          var resp = "Ближайший банкомат к вам: " + result[0].desc;
+          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
+          bot.sendMessage(fromId, resp, menu.main);
+          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
         } else {
-            console.log('No document(s) found with defined "find" criteria!');
+          console.log('No document(s) found with defined "find" criteria!');
         }
         //Close connection
         db.close();
-    });
+      });
+  }
+};
+var findNearOffice = function(db,coord,fromId, callback) {
+  if(typeof coord !== "undefined") {
+    db.collection('office').aggregate([
+        {
+          "$geoNear": {
+            "near": {
+              "type": "Point",
+              "coordinates": coord
+            },
+            "distanceField": "distance",
+            "maxDistance": 5000,
+            "spherical": true,
+            "query": {"loc.type": "Point"}
+          }
+        },
+        {
+          "$sort": {"distance": 1} // Sort the nearest first
+        }
+      ],
+      function (err, result) {
+        if (err) {
+          console.log(err);
+        } else if (result.length) {
+          //console.log(result[0].loc.coordinates);
+          var resp = "Ближайший офис к вам работает:\n " + result[0].desc;
+          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
+          bot.sendMessage(fromId, resp, menu.main);
+          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
+        } else {
+          console.log('No document(s) found with defined "find" criteria!');
+        }
+        //Close connection
+        db.close();
+      });
+  }
 };
