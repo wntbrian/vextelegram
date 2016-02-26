@@ -154,11 +154,11 @@ function vb_contacts(msg){
         resp += contacts.telephones[i].title + " " + contacts.telephones[i].numb + "\n";
     };
     for (var i in contacts.main_url ){
-        resp += "[" + contacts.main_url[i].title + "](" + contacts.main_url[i].numb + ")\n";
+        resp += "[" + contacts.main_url[i].title + "](" + contacts.main_url[i].link + ")\n";
     };
-    resp += "*Мы в социальных сетях*"
+    resp += "\n*Мы в социальных сетях*\n"
     for (var i in contacts.social_url ){
-        resp += "• [" + contacts.social_url[i].title + "](" + contacts.social_url[i].numb + ")\n";
+        resp += "• [" + contacts.social_url[i].title + "](" + contacts.social_url[i].link + ")\n";
     };
   bot.sendMessage(fromId,resp,menu.main);
 }
