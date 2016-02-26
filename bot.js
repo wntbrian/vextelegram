@@ -126,13 +126,13 @@ function vb_curs(msg){
   var fromId = msg.from.id;
   var resp = "*Курс валют на " + curs.update + "*\n \n";
 
-  resp += "*Для отделений г. Хабаровск* \n \n";
+  resp += "*Для отделений г. Хабаровск* \n";
   for (var atr in curs.bank_currency){
     resp += curs.bank_currency[atr].symbol + " " + atr + "\n" +
     " • покупка   " + curs.bank_currency[atr].buy + "\n" +
-    " • продажа   " + curs.bank_currency[atr].sell + "\n \n";
+    " • продажа   " + curs.bank_currency[atr].sell + "\n";
   }
-  resp += "*Курсы ЦБ* \n \n";
+  resp += "\n*Курсы ЦБ* \n";
     for (var atr in curs.bank_currency){
         resp += atr + "   " + curs.bank_currency[atr].cb + "\n";
     }
