@@ -21,6 +21,7 @@ var vost_youtube="https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0
 ////
 var menu = require("./json/menu.json");
 var credit = require("./credits.js");
+var credit = require("./deposits.js");
 var news_json;
 var yt_json;
 require("./rssfeed.js").rss(vost_youtube,function (json,err) {
@@ -142,7 +143,7 @@ function vb_bonus(msg){
 }
 function vb_menu(msg){
   var fromId = msg.from.id;
-  var resp = "Слушаю и подчиняюсь";
+  var resp = "Пожалуйста, выберите пункт меню";
   bot.sendMessage(fromId,resp,menu.main);
 }
 function vb_start(msg){
