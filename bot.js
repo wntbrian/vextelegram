@@ -421,6 +421,7 @@ function vb_curs2(msg)
 {
     var fromId = msg.from.id;
     cont = require("./json/contacts.json");
+    curr = require("./json/currency.json");
     bot.sendMessage(msg.from.id, 'Пожалуйста, введите наименование вашего населенного пункта', menu.reply)
         .then(function (sended) {
             var chatId = sended.chat.id;
@@ -436,9 +437,9 @@ function vb_curs2(msg)
                             console.log(url);
                             require("./parse_curs.js").get_curs(url, function (curs_json) {
                                 console.log("JSON : " + curs_json);
-                                var curs_office = "*Для отделений " + message.text + "* \n";
+                                var curs_office = "";
                                 for (var i in curs_json) {
-                                    curs_office += curs_json[i].name + "\n" +
+                                    curs_office += curr.list[curs_json[i].name].symbol + " " + curs_json[i].name + "\n" +
                                         " • покупка   " + curs_json[i].buy + "\n" +
                                         " • продажа   " + curs_json[i].sell + "\n";
                                 }
