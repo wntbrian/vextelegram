@@ -1,13 +1,13 @@
-
 var TelegramBot = require('node-telegram-bot-api');
-var transliterate = require('transliteration.cyr');
 var MongoClient = require('mongodb').MongoClient
   , format = require('util').format;
 var feed = require("feed-read");
+
+var menu = require("./json/menu.json");
+var cont = require("./json/contacts.json");
+
 var token = process.env.bottoken;
 var mongourl = "mongodb://127.0.0.1:27017/vexbot";
-// Setup polling way
-
 var options = {
   webHook: {
     port: 8080
@@ -16,8 +16,6 @@ var options = {
   }
 };
 ////
-var menu = require("./json/menu.json");
-var cont = require("./json/contacts.json");
 require("./credits.js");
 require("./deposits.js");
 require("./test.js");
@@ -142,37 +140,31 @@ function vb_bonus(msg){
   bot.sendMessage(fromId,resp,menu.none);
 }
 function vb_menu(msg){
-  var fromId = msg.from.id;
   var resp = "Пожалуйста, выберите пункт меню";
-  bot.sendMessage(fromId,resp,menu.main);
+  bot.sendMessage(msg.from.id,resp,menu.main);
 }
 function vb_start(msg){
-  
-  var fromId = msg.from.id;
   var resp = "Привет, меня зовут тестовый *Восточный БОТ* :) буду рад помочь!";
-  bot.sendMessage(fromId,resp,menu.main);
+  bot.sendMessage(msg.from.id,resp,menu.main);
 }
 function vb_contacts(msg){
-  var contacts = require("./json/contacts.json");
-  var fromId = msg.from.id;
   var resp = "";
-    for (var i in contacts.telephones ){
-        resp += contacts.telephones[i].title + " " + contacts.telephones[i].numb + "\n";
+    for (var i in cont.telephones ){
+        resp += cont.telephones[i].title + " " + cont.telephones[i].numb + "\n";
     };
     resp += "\n";
-    for (var i in contacts.main_url ){
-        resp += "• [" + contacts.main_url[i].title + "](" + contacts.main_url[i].link + ")\n";
+    for (var i in cont.main_url ){
+        resp += "• [" + cont.main_url[i].title + "](" + cont.main_url[i].link + ")\n";
     };
     resp += "\n*Мы в социальных сетях*\n"
-    for (var i in contacts.social_url ){
-        resp += "• [" + contacts.social_url[i].title + "](" + contacts.social_url[i].link + ")\n";
+    for (var i in cont.social_url ){
+        resp += "• [" + cont.social_url[i].title + "](" + cont.social_url[i].link + ")\n";
     };
-  bot.sendMessage(fromId,resp,menu.main);
+  bot.sendMessage(msg.from.id,resp,menu.main);
 }
 
 function vb_sms(msg){
     var sms_codes = require("./json/sms_codes.json");
-    var fromId = msg.from.id;
     var resp = "";
     sms_codes.info;
     for (var i in sms_codes.title ){
@@ -182,38 +174,75 @@ function vb_sms(msg){
     for (var i in sms_codes.codes ){
         resp += "• " + sms_codes.codes[i].title + "\n  " + sms_codes.codes[i].text + "\n";
     };
-    bot.sendMessage(fromId,resp,menu.none);
+    bot.sendMessage(msg.from.id,resp,menu.none);
 }
 
 function vb_twitter(msg){
-  var fromId = msg.from.id;
   var resp = "twitter";
   resp = twittermsg[randomInt(0,10)].text;
-  bot.sendMessage(fromId,resp,menu.main);
+  bot.sendMessage(msg.from.id,resp,menu.main);
 }
 function vb_news(msg){
-  var fromId = msg.from.id;
   var resp = "новости";
   var i = randomInt(0,news_json.length-1);
   resp = news_json[i].title+"\n"+news_json[i].link;
-  bot.sendMessage(fromId,resp,menu.main);
+  bot.sendMessage(msg.from.id,resp,menu.main);
 }
 function vb_youtube(msg){
-    var fromId = msg.from.id;
     var resp = "youtube";
     var i = randomInt(0,yt_json.length-1);
     resp = yt_json[i].title+"\n"+yt_json[i].link;
-    bot.sendMessage(fromId,resp,menu.main);
+    bot.sendMessage(msg.from.id,resp,menu.main);
 }
-//TODO найти решения для таблицы
-function vb_table(msg){
+
+function vb_products(msg){
     var fromId = msg.from.id;
-    var resp = "Проверка\n" +
-        "```раз два три четыре ```\n"+
-       "```пять шесть семь```"+
-"`djçlkç`";
-    bot.sendMessage(fromId,resp,menu.main);
+    var resp = "Что вас интересует?";
+    bot.sendMessage(fromId,resp,menu.products);
 }
+
+function vb_credit_cards(msg)
+{
+    var fromId = msg.from.id;
+    findProducts("credits",function(resp) {
+        bot.sendMessage(fromId, resp, menu.products)
+    });
+}
+
+function vb_deposits(msg)
+{
+    var fromId = msg.from.id;
+    findProducts("deposits",function(resp) {
+        bot.sendMessage(fromId, resp, menu.products)
+    });
+}
+var findProducts = function(p_collection, callback) {
+    var resp = "";
+    var cont = require("./json/contacts.json");
+    MongoClient.connect(mongourl, function(err, db) {
+        if (err) {
+            console.log(err)
+        }
+        else {
+            var cursor = db.collection(p_collection).find().toArray(function (err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    if (result.length) {
+                        for (var atr in result) {
+                            resp += "[" + result[atr].title.trim() + "]("+cont.bank_khb + result[atr].link.trim() + ")\n";
+                        }
+                    } else {
+                        resp = "По вашему запросу ничего не найдено :-(";
+                    }
+                }
+                db.close();
+                callback(resp);
+            });
+        };
+    });
+};
+
 function vb_atm_near(msg)
 {
   var fromId = msg.from.id;
@@ -274,75 +303,6 @@ function vb_office_near(msg)
 }
 // TODO добавить объекты офисов
 
-function vb_products(msg){
-    var fromId = msg.from.id;
-    var resp = "Что вас интересует?";
-    bot.sendMessage(fromId,resp,menu.products);
-}
-
-function vb_credit_cards(msg)
-{
-  var fromId = msg.from.id;
-  MongoClient.connect(mongourl, function(err, db) {
-    findCreditCard(db,fromId, function() {
-      db.close();
-    });
-  });
-}
-var findCreditCard = function(db,fromId, callback) {
-  var cursor = db.collection('credits').find( ).toArray(function (err, result) {
-    if (err) {
-      console.log(err);
-    } else if (result.length) {
-        var resp = "";
-        for (var atr in result){
-            resp +="["+result[atr].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[atr].link.trim()+")\n";
-            //resp += "/info"+atr+" "+result[atr].title.trim()+"\n";
-        };
-        bot.sendMessage(fromId,resp,menu.none)
-        //bot.sendMessage(fromId, '/rest', menu.reply)
-        //    .then(function (sended) {
-        //        var chatId = sended.chat.id;
-        //        var messageId = sended.message_id;
-        //        bot.onReplyToMessage(chatId, messageId, function (message) {
-        //                    bot.sendMessage(chatId,"ответ",menu.none)
-        //        });
-        //    });
-    } else {
-      console.log('No document(s) found with defined "find" criteria!');
-    }
-    //Close connection
-    db.close();
-  });
-};
-
-function vb_deposits(msg)
-{
-    var fromId = msg.from.id;
-    MongoClient.connect(mongourl, function(err, db) {
-        findDeposit(db,fromId, function() {
-            db.close();
-        });
-    });
-}
-
-var findDeposit = function(db,fromId, callback) {
-    var cursor = db.collection('deposit').find( ).toArray(function (err, result) {
-        if (err) {
-            console.log(err);
-        } else if (result.length) {
-            var resp = "";
-            for (var atr in result){
-                resp +="["+result[atr].title.trim()+"](http://www.vostbank.ru/khabarovsk"+result[atr].link.trim()+")\n";
-                //resp += "/info"+atr+" "+result[atr].title.trim()+"\n";
-            };
-            bot.sendMessage(fromId,resp,menu.none)
-         } else {
-            console.log('No document(s) found with defined "find" criteria!');
-        }
-        db.close();
-    });
-};
 
 var findNearAtm = function(db,coord,fromId, callback) {
   if(typeof coord !== "undefined") {
@@ -492,3 +452,13 @@ var findCity = function(cityName, callback) {
         }
     });
 };
+
+//TODO найти решения для таблицы
+function vb_table(msg){
+    var fromId = msg.from.id;
+    var resp = "Проверка\n" +
+        "```раз два три четыре ```\n"+
+        "```пять шесть семь```"+
+        "`djçlkç`";
+    bot.sendMessage(fromId,resp,menu.main);
+}
