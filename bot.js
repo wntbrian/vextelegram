@@ -420,7 +420,7 @@ var findNearOffice = function(db,coord,fromId, callback) {
 function vb_curs2(msg)
 {
     var fromId = msg.from.id;
-    var curs_json;
+    cont = require("./json/contacts.json");
     bot.sendMessage(msg.from.id, 'Пожалуйста, введите наименование вашего населенного пункта', menu.reply)
         .then(function (sended) {
             var chatId = sended.chat.id;
@@ -428,13 +428,24 @@ function vb_curs2(msg)
             bot.onReplyToMessage(chatId, messageId, function (message) {
                 if (typeof message.text !== "undefined") {
                     // TODO сделать транслитерацию сообщения
-                    var city = message.text;
-                    city = city.trim();
-                    city = city.toLowerCase();
-                    MongoClient.connect(mongourl, function(err, db) {
-                        findCity(db, city, fromId, function() {
-                            db.close();
-                        });
+                    findCity(message.text.trim().toLowerCase(), function (err, url) {
+                        if (err) {
+                            bot.sendMessage(fromId, err, menu.main)
+                        }
+                        else {
+                            console.log(url);
+                            require("./parse_curs.js").get_curs(url, function (curs_json) {
+                                console.log("JSON : " + curs_json);
+                                var curs_office = "*Для отделений " + message.text + "* \n";
+                                for (var i in curs_json) {
+                                    curs_office += curs_json[i].name + "\n" +
+                                        " • покупка   " + curs_json[i].buy + "\n" +
+                                        " • продажа   " + curs_json[i].sell + "\n";
+                                }
+                                bot.sendMessage(fromId, curs_office, menu.main)
+                            })
+                        }
+                        ;
                     });
                 }
                  else {
@@ -443,21 +454,35 @@ function vb_curs2(msg)
             });
         });
 }
-var findCity = function(db, cityName, fromId, callback) {
+var findCity = function(cityName, callback) {
     console.log(cityName);
-    var cursor = db.collection('cities').find({name: cityName}).toArray(function (err, result) {
+    MongoClient.connect(mongourl, function(err, db) {
         if (err) {
             console.log(err);
-        } else if (result.length) {
-            var url = "";
-            for (var atr in result){
-                url = "http://www.vostbank.ru/"+result[atr].synonym;
-            };
-            bot.sendMessage(fromId,url,menu.main)
-        } else {
-            var resp = "К сожалению, я не знаю такого города, может попробуешь другой?"
-            bot.sendMessage(fromId,resp,menu.main)
         }
-        db.close();
+        else
+        {
+            var cursor = db.collection('cities').find({name: cityName}).toArray(function (err, result) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else {
+                        var url, err;
+                        if (result.length) {
+                            for (var atr in result) {
+                                url = "http://www.vostbank.ru/" + result[atr].synonym;
+                                callback("", url);
+                            }
+                            ;
+                        }
+                        else {
+                            callback("К сожалению, я не знаю такого города", "");
+                        }
+                    }
+                    ;
+                    db.close();
+                }
+                )
+        }
     });
 };
