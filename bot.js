@@ -69,10 +69,10 @@ bot.on('message', function (msg) {
           vb_menu(msg);
           break;
         case commands.atm:
-          vb_atm_near(msg);
+          vb_near(msg,"atm");
           break;
         case commands.office:
-          vb_office_near(msg);
+          vb_near(msg,"office");
           break;
         case commands.contact:
           vb_contacts(msg);
@@ -90,6 +90,7 @@ bot.on('message', function (msg) {
           vb_twitter(msg);
           break;
         case commands.curs:
+            //TODO курсы ЦБ http://cbr.ru/
           vb_curs2(msg);
           break;
         case commands.products:
@@ -203,36 +204,39 @@ function vb_products(msg){
 
 function vb_credit_cards(msg)
 {
-    var fromId = msg.from.id;
     findProducts("credits",function(resp) {
-        bot.sendMessage(fromId, resp, menu.products)
+        bot.sendMessage(msg.from.id, resp, menu.products)
     });
 }
 
 function vb_deposits(msg)
 {
-    var fromId = msg.from.id;
-    findProducts("deposits",function(resp) {
-        bot.sendMessage(fromId, resp, menu.products)
+    findProducts("deposit",function(resp) {
+        bot.sendMessage(msg.from.id, resp, menu.products)
     });
 }
 var findProducts = function(p_collection, callback) {
     var resp = "";
-    var cont = require("./json/contacts.json");
     MongoClient.connect(mongourl, function(err, db) {
-        if (err) {
+        if (err)
+        {
             console.log(err)
         }
-        else {
+        else
+        {
             var cursor = db.collection(p_collection).find().toArray(function (err, result) {
-                if (err) {
+                if (err)
+                {
                     console.log(err);
-                } else {
-                    if (result.length) {
+                } else
+                {
+                    if (result.length)
+                    {
                         for (var atr in result) {
                             resp += "[" + result[atr].title.trim() + "]("+cont.bank_khb + result[atr].link.trim() + ")\n";
                         }
-                    } else {
+                    } else
+                    {
                         resp = "По вашему запросу ничего не найдено :-(";
                     }
                 }
@@ -243,7 +247,7 @@ var findProducts = function(p_collection, callback) {
     });
 };
 
-function vb_atm_near(msg)
+function vb_near(msg, p_type)
 {
   var fromId = msg.from.id;
   bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
@@ -251,131 +255,106 @@ function vb_atm_near(msg)
       var chatId = sended.chat.id;
       var messageId = sended.message_id;
       bot.onReplyToMessage(chatId, messageId, function (message) {
-        if (typeof message.location !== "undefined") {
-          MongoClient.connect(mongourl, function (err, db) {
-            findNearAtm(db, message.location, fromId, function () {
-              db.close();
+          var tmp_loc;
+          if (typeof message.location == "undefined") {
+              //tmp_loc = [30.35515, 59.91884];
+              tmp_loc = [38.134120, 56.319050];
+          };
+            findNear(tmp_loc, p_type, function (err, loc) {
+                if (err){
+                    console.log(err);
+                }
+                else {
+                    bot.sendMessage(fromId, loc.title, menu.main);
+                    bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
+                };
             });
-          });
-        }else
-        {
-          MongoClient.connect(mongourl, function (err, db) {
-            findNearAtm(db, [30.35515,59.91884], fromId, function () {
-              db.close();
-            });
-          });
-        }
-      });
+        });
     });
   // TODO расширить список банкоматов на 2 или 3
 }
-function vb_office_near(msg)
-{
-  var fromId = msg.from.id;
-  var opts = {
-    reply_markup: JSON.stringify(
-      {
-        force_reply: true
-      }
-    )};
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
-    .then(function (sended) {
-      var chatId = sended.chat.id;
-      var messageId = sended.message_id;
-      bot.onReplyToMessage(chatId, messageId, function (message) {
-        if (typeof message.location !== "undefined") {
-          MongoClient.connect(mongourl, function (err, db) {
-            findNearOffice(db, message.location, fromId, function () {
-              db.close();
-            });
-          });
-        }else
-        {
-          MongoClient.connect(mongourl, function (err, db) {
-            findNearOffice(db, [30.35515,59.91884], fromId, function () {
-              db.close();
-            });
-          });
-        }
-      });
-    });
-  // TODO расширить список банкоматов на 2 или 3
-}
-// TODO добавить объекты офисов
 
+var findNear = function(coord, p_type, callback) {
+    var resp;
+    if (typeof coord == "undefined") {
+        callback("Не переданы координаты", resp);
+    }
+    else {
+        MongoClient.connect(mongourl, function (err, db) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                db.collection(p_type).aggregate([
+                    {
+                        "$geoNear": {
+                            "near": {
+                                "type": "Point",
+                                "coordinates": coord
+                            },
+                            "distanceField": "distance",
+                            "maxDistance": 5000,
+                            "spherical": true,
+                            "query": {"loc.type": "Point"}
+                        }
+                    },
+                    {
+                        "$sort": {"distance": 1} // Sort the nearest first
+                    }
+                ], function (err, result) {
+                    if (err) {
+                        console.log(err);
+                        db.close();
+                        callback(err, resp);
+                    }
+                    else {
+                        if (result.length) {
+                            // TODO заголовок!
+                            var txt = "";
+                            if (p_type = "atm") {
+                                txt = "Расположение ближайшего банкомата: ";
+                            }
+                            else {
+                                txt = "Ближайшее отделение: ";
+                            }
+                            // TODO парсинг описания режима работы!
+                            resp = {"title": txt + "*" + result[0].desc + "*, находится в " + result[0].distance.toFixed(0) + " метрах",
+                                    "coordX": result[0].loc.coordinates[1],
+                                    "coordY": result[0].loc.coordinates[0]};
+                        }
+                        else {
+                            resp = {"title": "К сожалению, поблизости ничего не найдено"};
+                        }
+                        console.log(resp);
+                        db.close();
+                        callback("",resp);
+                    };
+                });
+            }
+        });
+   }
+};
 
-var findNearAtm = function(db,coord,fromId, callback) {
-  if(typeof coord !== "undefined") {
-    db.collection('atm').aggregate([
-        {
-          "$geoNear": {
-            "near": {
-              "type": "Point",
-              "coordinates": coord
-            },
-            "distanceField": "distance",
-            "maxDistance": 5000,
-            "spherical": true,
-            "query": {"loc.type": "Point"}
-          }
-        },
-        {
-          "$sort": {"distance": 1} // Sort the nearest first
-        }
-      ],
-      function (err, result) {
-        if (err) {
-          console.log(err);
-        } else if (result.length) {
-          //console.log(result[0].loc.coordinates);
-          var resp = "Ближайший банкомат к вам: " + result[0].desc;
-          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
-          bot.sendMessage(fromId, resp, menu.main);
-          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
-        } else {
-          console.log('No document(s) found with defined "find" criteria!');
-        }
-        //Close connection
-        db.close();
-      });
-  }
-};
-var findNearOffice = function(db,coord,fromId, callback) {
-  if(typeof coord !== "undefined") {
-    db.collection('office').aggregate([
-        {
-          "$geoNear": {
-            "near": {
-              "type": "Point",
-              "coordinates": coord
-            },
-            "distanceField": "distance",
-            "maxDistance": 5000,
-            "spherical": true,
-            "query": {"loc.type": "Point"}
-          }
-        },
-        {
-          "$sort": {"distance": 1} // Sort the nearest first
-        }
-      ],
-      function (err, result) {
-        if (err) {
-          console.log(err);
-        } else if (result.length) {
-          //console.log(result[0].loc.coordinates);
-          var resp = "Ближайший офис к вам работает:\n " + result[0].desc;
-          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
-          bot.sendMessage(fromId, resp, menu.main);
-          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
-        } else {
-          console.log('No document(s) found with defined "find" criteria!');
-        }
-        //Close connection
-        db.close();
-      });
-  }
-};
+//var findNearOffice = function(db,coord,fromId, callback) {
+//  if(typeof coord !== "undefined") {
+//    db.collection('office').aggregate(,
+//      function (err, result) {
+//        if (err) {
+//          console.log(err);
+//        } else if (result.length) {
+//          //console.log(result[0].loc.coordinates);
+//          var resp = "Ближайший офис к вам работает:\n " + result[0].desc;
+//          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
+//          bot.sendMessage(fromId, resp, menu.main);
+//          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
+//        } else {
+//          console.log('No document(s) found with defined "find" criteria!');
+//        }
+//        //Close connection
+//        db.close();
+//      });
+//  }
+//};
 
 function vb_curs2(msg)
 {
@@ -417,10 +396,10 @@ function vb_curs2(msg)
                 }
             });
         });
-}
+};
+
 var findCity = function(cityName, callback) {
     console.log(cityName);
-    var cont = require("./json/contacts.json");
     MongoClient.connect(mongourl, function(err, db) {
         if (err) {
             console.log(err);
@@ -461,4 +440,4 @@ function vb_table(msg){
         "```пять шесть семь```"+
         "`djçlkç`";
     bot.sendMessage(fromId,resp,menu.main);
-}
+};
