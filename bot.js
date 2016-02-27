@@ -420,30 +420,33 @@ var findNearOffice = function(db,coord,fromId, callback) {
 function vb_curs2(msg)
 {
     var fromId = msg.from.id;
-    cont = require("./json/contacts.json");
-    curr = require("./json/currency.json");
+    var curr = require("./json/currency.json");
     bot.sendMessage(msg.from.id, 'Пожалуйста, введите наименование вашего населенного пункта', menu.reply)
         .then(function (sended) {
             var chatId = sended.chat.id;
             var messageId = sended.message_id;
             bot.onReplyToMessage(chatId, messageId, function (message) {
                 if (typeof message.text !== "undefined") {
-                    // TODO сделать транслитерацию сообщения
                     findCity(message.text.trim().toLowerCase(), function (err, url) {
                         if (err) {
                             bot.sendMessage(fromId, err, menu.main)
                         }
                         else {
                             console.log(url);
-                            require("./parse_curs.js").get_curs(url, function (curs_json) {
-                                console.log("JSON : " + curs_json);
-                                var curs_office = "";
-                                for (var i in curs_json) {
-                                    curs_office += curr.list[curs_json[i].name].symbol + " " + curs_json[i].name + "\n" +
-                                        " • покупка   " + curs_json[i].buy + "\n" +
-                                        " • продажа   " + curs_json[i].sell + "\n";
+                            require("./parse_curs.js").get_curs(url, function (err, curs_json) {
+                                if (err) {
+                                    bot.sendMessage(fromId, err, menu.main)
                                 }
-                                bot.sendMessage(fromId, curs_office, menu.main)
+                                else {
+                                    //console.log("JSON : " + curs_json);
+                                    var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
+                                    for (var i in curs_json.rates) {
+                                        curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
+                                            " • покупка   " + curs_json.rates[i].buy + "\n" +
+                                            " • продажа   " + curs_json.rates[i].sell + "\n";
+                                    }
+                                    bot.sendMessage(fromId, curs_office, menu.main)
+                                }
                             })
                         }
                         ;
@@ -457,6 +460,7 @@ function vb_curs2(msg)
 }
 var findCity = function(cityName, callback) {
     console.log(cityName);
+    var cont = require("./json/contacts.json");
     MongoClient.connect(mongourl, function(err, db) {
         if (err) {
             console.log(err);
@@ -471,7 +475,8 @@ var findCity = function(cityName, callback) {
                         var url, err;
                         if (result.length) {
                             for (var atr in result) {
-                                url = "http://www.vostbank.ru/" + result[atr].synonym;
+                                url = cont.bank_url + result[atr].synonym;
+                                console.log("url="+url);
                                 callback("", url);
                             }
                             ;
