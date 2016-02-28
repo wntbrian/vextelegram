@@ -5,6 +5,7 @@ module.exports = {
         feed(url, function(err, articles) {
             // TODO разобраться throw err;  Error: Body is not RSS or ATOM
             if (err) {
+                console.log(err);
                 throw err;
             }
             if (typeof callback == "function") {

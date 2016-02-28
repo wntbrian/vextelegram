@@ -81,8 +81,8 @@ bot.on('message', function (msg) {
           vb_sms(msg);
           break;
         case commands.news:
-          vb_news(msg);
-          break;
+            vb_random_news(msg);
+            break;
         case commands.youtube:
           vb_youtube(msg);
           break;
@@ -115,41 +115,19 @@ bot.on('message', function (msg) {
 
     //bot.sendPhoto(chatId, photo, {caption: 'Lovely kittens'});
 });
-function vb_curs(msg){
-  var curs = require("./json/currency.json");
-  var fromId = msg.from.id;
-  var curs_office = "*Для отделений г. Хабаровск* \n";
-  var curs_cb = "\n*Курсы ЦБ* \n";
-  for (var atr in curs.bank_currency){
-      curs_office += curs.bank_currency[atr].symbol + " " + atr + "\n" +
-    " • покупка   " + curs.bank_currency[atr].buy + "\n" +
-    " • продажа   " + curs.bank_currency[atr].sell + "\n";
-      curs_cb += atr + "   " + curs.bank_currency[atr].cb + "\n";
-  }
-  var resp = "*Курс валют на " + curs.update + "*\n \n" + curs_office + curs_cb;
-  bot.sendMessage(fromId,resp,menu.main);
-}
 
-function vb_bonus(msg){
-  var bonuses = require("./json/bonus.json");
-  var fromId = msg.from.id;
-  var resp = "";
-
-  for (var atr in bonuses){
-        resp += "["+bonuses[atr].title+"]("+bonuses[atr].link+")\n"+bonuses[atr].desc+"\n";
-    };
-  bot.sendMessage(fromId,resp,menu.none);
-}
-function vb_menu(msg){
-  var resp = "Пожалуйста, выберите пункт меню";
-  bot.sendMessage(msg.from.id,resp,menu.main);
-}
 function vb_start(msg){
-  var resp = "Привет, меня зовут тестовый *Восточный БОТ* :) буду рад помочь!";
-  bot.sendMessage(msg.from.id,resp,menu.main);
+    var resp = "Привет, меня зовут тестовый *Восточный БОТ* :) буду рад помочь!";
+    bot.sendMessage(msg.from.id,resp,menu.main);
 }
+
+function vb_menu(msg){
+    var resp = "Пожалуйста, выберите пункт меню";
+    bot.sendMessage(msg.from.id,resp,menu.main);
+}
+
 function vb_contacts(msg){
-  var resp = "";
+    var resp = "";
     for (var i in cont.telephones ){
         resp += cont.telephones[i].title + " " + cont.telephones[i].numb + "\n";
     };
@@ -161,7 +139,40 @@ function vb_contacts(msg){
     for (var i in cont.social_url ){
         resp += "• [" + cont.social_url[i].title + "](" + cont.social_url[i].link + ")\n";
     };
-  bot.sendMessage(msg.from.id,resp,menu.main);
+    bot.sendMessage(msg.from.id,resp,menu.main);
+}
+
+function vb_products(msg){
+    var fromId = msg.from.id;
+    var resp = "Что вас интересует?";
+    bot.sendMessage(fromId,resp,menu.products);
+}
+
+function vb_credit_cards(msg) {
+    findProducts("credits",function(resp) {
+        bot.sendMessage(msg.from.id, resp, menu.products)
+    });
+}
+
+function vb_deposits(msg) {
+    findProducts("deposit",function(resp) {
+        bot.sendMessage(msg.from.id, resp, menu.products)
+    });
+}
+
+function vb_deposits2(msg) {
+    findProducts("deposit",function(resp) {
+        bot.sendMessage(msg.from.id, resp, menu.products)
+    });
+}
+
+function vb_bonus(msg){
+  var bonuses = require("./json/bonus.json");
+  var resp = "";
+  for (var atr in bonuses){
+        resp += "["+bonuses[atr].title+"]("+bonuses[atr].link+")\n"+bonuses[atr].desc+"\n";
+    };
+  bot.sendMessage(msg.from.id,resp,menu.none);
 }
 
 function vb_sms(msg){
@@ -178,17 +189,88 @@ function vb_sms(msg){
     bot.sendMessage(msg.from.id,resp,menu.none);
 }
 
+function vb_near(msg, p_type) {
+    var fromId = msg.from.id;
+    bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
+        .then(function (sended) {
+            var chatId = sended.chat.id;
+            var messageId = sended.message_id;
+            bot.onReplyToMessage(chatId, messageId, function (message) {
+                var tmp_loc;
+                if (typeof message.location == "undefined") {
+                    tmp_loc = [30.35515, 59.91884];
+                };
+                findNear(tmp_loc, p_type, function (err, loc) {
+                    if (err){
+                        console.log(err);
+                    }
+                    else {
+                        switch (p_type) {
+                            case "atm" :
+                                var txt = "";
+                                txt = "Расположение ближайшего банкомата: *" + loc.desc;
+                                txt += "*, находится в " + loc.distance + " метрах";
+                                bot.sendMessage(fromId, txt, menu.main);
+                                bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
+                                break;
+                            case "office":
+                                parse_office_desc(loc.desc, function(txt) {
+                                    txt = "*Ближайшее отделение находится в " + loc.distance + " метрах*\n" +
+                                        "*Режим работы:*" + txt;
+                                    bot.sendMessage(fromId, txt, menu.main);
+                                    bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
+                                });
+                                break;
+                        };
+                     };
+                });
+            });
+        });
+    // TODO расширить список банкоматов на 2 или 3
+};
+
+var parse_office_desc = function (desc, callback) {
+    var str_arr = desc.split(",");
+    var ret = "";
+    for (i in str_arr) {
+        ret += str_arr[i].replace("Касса:","\n*Касса*\n").replace("Перерыв:","\n*Перерыв*\n").replace("Отделение:","\n")+"\n";
+    }
+    callback(ret);
+}
+
+function vb_random_news(msg) {
+    switch (randomInt(0,9)) {
+        case 0:
+        case 1:
+        case 2:
+            vb_twitter(msg);
+            break;
+        case 3:
+        case 4:
+        case 5:
+            vb_youtube(msg);
+            break;
+        case 6:
+        case 7:
+        case 8:
+        default:
+            vb_news(msg);
+    };
+};
+
 function vb_twitter(msg){
   var resp = "twitter";
   resp = twittermsg[randomInt(0,10)].text;
   bot.sendMessage(msg.from.id,resp,menu.main);
 }
+
 function vb_news(msg){
   var resp = "новости";
   var i = randomInt(0,news_json.length-1);
   resp = news_json[i].title+"\n"+news_json[i].link;
   bot.sendMessage(msg.from.id,resp,menu.main);
 }
+
 function vb_youtube(msg){
     var resp = "youtube";
     var i = randomInt(0,yt_json.length-1);
@@ -196,47 +278,24 @@ function vb_youtube(msg){
     bot.sendMessage(msg.from.id,resp,menu.main);
 }
 
-function vb_products(msg){
-    var fromId = msg.from.id;
-    var resp = "Что вас интересует?";
-    bot.sendMessage(fromId,resp,menu.products);
-}
-
-function vb_credit_cards(msg)
-{
-    findProducts("credits",function(resp) {
-        bot.sendMessage(msg.from.id, resp, menu.products)
-    });
-}
-
-function vb_deposits(msg)
-{
-    findProducts("deposit",function(resp) {
-        bot.sendMessage(msg.from.id, resp, menu.products)
-    });
-}
 var findProducts = function(p_collection, callback) {
     var resp = "";
     MongoClient.connect(mongourl, function(err, db) {
-        if (err)
-        {
+        if (err) {
             console.log(err)
         }
-        else
-        {
+        else {
             var cursor = db.collection(p_collection).find().toArray(function (err, result) {
-                if (err)
-                {
+                if (err) {
                     console.log(err);
-                } else
-                {
-                    if (result.length)
-                    {
+                }
+                else {
+                    if (result.length) {
                         for (var atr in result) {
-                            resp += "[" + result[atr].title.trim() + "]("+cont.bank_khb + result[atr].link.trim() + ")\n";
+                            resp += "/"+p_collection + atr + " [" + result[atr].title.trim() + "]("+cont.bank_khb + result[atr].link.trim() + ")\n";
                         }
-                    } else
-                    {
+                    }
+                    else {
                         resp = "По вашему запросу ничего не найдено :-(";
                     }
                 }
@@ -246,33 +305,6 @@ var findProducts = function(p_collection, callback) {
         };
     });
 };
-
-function vb_near(msg, p_type)
-{
-  var fromId = msg.from.id;
-  bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
-    .then(function (sended) {
-      var chatId = sended.chat.id;
-      var messageId = sended.message_id;
-      bot.onReplyToMessage(chatId, messageId, function (message) {
-          var tmp_loc;
-          if (typeof message.location == "undefined") {
-              //tmp_loc = [30.35515, 59.91884];
-              tmp_loc = [38.134120, 56.319050];
-          };
-            findNear(tmp_loc, p_type, function (err, loc) {
-                if (err){
-                    console.log(err);
-                }
-                else {
-                    bot.sendMessage(fromId, loc.title, menu.main);
-                    bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
-                };
-            });
-        });
-    });
-  // TODO расширить список банкоматов на 2 или 3
-}
 
 var findNear = function(coord, p_type, callback) {
     var resp;
@@ -309,21 +341,13 @@ var findNear = function(coord, p_type, callback) {
                     }
                     else {
                         if (result.length) {
-                            // TODO заголовок!
-                            var txt = "";
-                            if (p_type = "atm") {
-                                txt = "Расположение ближайшего банкомата: ";
-                            }
-                            else {
-                                txt = "Ближайшее отделение: ";
-                            }
-                            // TODO парсинг описания режима работы!
-                            resp = {"title": txt + "*" + result[0].desc + "*, находится в " + result[0].distance.toFixed(0) + " метрах",
+                            resp = {"desc": result[0].desc,
+                                    "distance": result[0].distance.toFixed(0),
                                     "coordX": result[0].loc.coordinates[1],
                                     "coordY": result[0].loc.coordinates[0]};
                         }
                         else {
-                            resp = {"title": "К сожалению, поблизости ничего не найдено"};
+                            resp = {"desc": "К сожалению, поблизости ничего не найдено"};
                         }
                         console.log(resp);
                         db.close();
@@ -356,8 +380,7 @@ var findNear = function(coord, p_type, callback) {
 //  }
 //};
 
-function vb_curs2(msg)
-{
+function vb_curs2(msg) {
     var fromId = msg.from.id;
     var curr = require("./json/currency.json");
     bot.sendMessage(msg.from.id, 'Пожалуйста, введите наименование вашего населенного пункта', menu.reply)
@@ -404,8 +427,7 @@ var findCity = function(cityName, callback) {
         if (err) {
             console.log(err);
         }
-        else
-        {
+        else {
             var cursor = db.collection('cities').find({name: cityName}).toArray(function (err, result) {
                     if (err) {
                         console.log(err);
@@ -417,17 +439,14 @@ var findCity = function(cityName, callback) {
                                 url = cont.bank_url + result[atr].synonym;
                                 console.log("url="+url);
                                 callback("", url);
-                            }
-                            ;
+                            };
                         }
                         else {
                             callback("К сожалению, я не знаю такого города", "");
                         }
-                    }
-                    ;
+                    };
                     db.close();
-                }
-                )
+                })
         }
     });
 };
