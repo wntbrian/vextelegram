@@ -13,7 +13,8 @@
     "feed-read" : "latest",
     "request" : "*",
     "cheerio" : "*",
-    "mongodb" : "*"
+    "mongodb" : "*",
+    "xml2js" : "*"
   },
   "devDependencies": {},
   "scripts": {

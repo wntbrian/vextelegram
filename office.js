@@ -33,7 +33,7 @@ function updateDB(coord, desc) {
         "loc": {"type": "Point", "coordinates": coord}
       }
     }, {"upsert": true}, function (err) {
-      if (err) throw err;
+      if (err) {console.log("err")};
       db.close();
     });
   });
