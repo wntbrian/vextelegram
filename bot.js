@@ -15,7 +15,7 @@ var options = {
     //cert: __dirname+'/crt.pem'
   }
 };
-////
+
 require("./credits.js");
 require("./deposits.js");
 require("./test.js");
@@ -28,6 +28,16 @@ require("./rssfeed.js").rss(cont.rss.news_feed ,function (json,err) {
   news_json = json;
 });
 ///
+
+var g_dep_arr;
+var g_card_arr;
+require("./modules.js").findProducts("deposit" ,function (json) {
+    g_dep_arr = json;
+});
+require("./modules.js").findProducts("credits" ,function (json) {
+    g_card_arr = json;
+});
+
 var twittermsg = "";
 var Twitter = require('twitter');
 var client = new Twitter({
@@ -65,6 +75,9 @@ bot.on('message', function (msg) {
         case commands.start:
           vb_start(msg);
           break;
+          case commands.setplace:
+              vb_saveuserplace(msg);
+              break;
         case commands.menu:
           vb_menu(msg);
           break;
@@ -91,7 +104,7 @@ bot.on('message', function (msg) {
           break;
         case commands.curs:
             //TODO курсы ЦБ http://cbr.ru/
-          vb_curs2(msg);
+          vb_curs3(msg);
           break;
         case commands.products:
           vb_products(msg);
@@ -100,7 +113,7 @@ bot.on('message', function (msg) {
           vb_credit_cards(msg);
           break;
         case commands.deposit:
-          vb_deposits(msg);
+          vb_deposits2(msg);
           break;
         case commands.bonus:
           vb_bonus(msg);
@@ -117,9 +130,31 @@ bot.on('message', function (msg) {
 });
 
 function vb_start(msg){
-    var resp = "Привет, меня зовут тестовый *Восточный БОТ* :) буду рад помочь!";
+    var resp = "*Вас приветствует тестовый БОТ банка «Восточный»*\n"+
+        "Я помогу Вам получить актуальную информацию о наших продуктах и услугах," +
+        " а также расскажу о самых свежих новостях 😊";
     bot.sendMessage(msg.from.id,resp,menu.main);
-}
+};
+
+function vb_saveuserplace(msg){
+    bot.sendMessage(msg.from.id, 'Введите наименование населенного пункта', menu.reply).then(function (sended) {
+        var chatId = sended.chat.id;
+        var messageId = sended.message_id;
+        bot.onReplyToMessage(chatId, messageId, function (message) {
+            if (typeof message.text !== "undefined") {
+                require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
+                    if (err) {
+                        bot.sendMessage(msg.from.id, err, menu.main)
+                    }
+                    else {
+                        require("./modules.js").SaveUserPlace({"userid": msg.from.id, "place": place.synonym});
+                        bot.sendMessage(msg.from.id, "Исполнено", menu.main);
+                    }
+                })
+            }
+        })
+    })
+};
 
 function vb_menu(msg){
     var resp = "Пожалуйста, выберите пункт меню";
@@ -135,7 +170,7 @@ function vb_contacts(msg){
     for (var i in cont.main_url ){
         resp += "• [" + cont.main_url[i].title + "](" + cont.main_url[i].link + ")\n";
     };
-    resp += "\n*Мы в социальных сетях*\n"
+    resp += "\n*«Восточный» в социальных сетях*\n"
     for (var i in cont.social_url ){
         resp += "• [" + cont.social_url[i].title + "](" + cont.social_url[i].link + ")\n";
     };
@@ -149,22 +184,63 @@ function vb_products(msg){
 }
 
 function vb_credit_cards(msg) {
-    findProducts("credits",function(resp) {
+    var resp = "";
+    if (g_card_arr.length) {
+        for (var atr in g_card_arr) {
+            resp += "[" + g_card_arr[atr].title.trim() + "](" + cont.bank_khb + g_card_arr[atr].link.trim() + ")\n";
+        }
         bot.sendMessage(msg.from.id, resp, menu.products)
-    });
-}
+    }
+    else {
+        bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
+    }
+};
 
 function vb_deposits(msg) {
-    findProducts("deposit",function(resp) {
-        bot.sendMessage(msg.from.id, resp, menu.products)
+    findProducts("deposit",function(result) {
+        var resp = "";
+        if (result.length) {
+            for (var atr in result) {
+                resp += "[Вклад " + result[atr].title.trim() + "](" + cont.bank_khb + result[atr].link.trim() + ")\n";
+            }
+            bot.sendMessage(msg.from.id, resp, menu.products)
+        }
+        else {
+            bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
+        }
     });
 }
 
 function vb_deposits2(msg) {
-    findProducts("deposit",function(resp) {
+    var resp = "";
+    if (g_dep_arr.length) {
+        for (var atr in g_dep_arr) {
+            resp += atr + " - Вклад *" + g_dep_arr[atr].title.trim() + "*\n";
+        }
         bot.sendMessage(msg.from.id, resp, menu.products)
-    });
-}
+        bot.sendMessage(msg.from.id, 'Для получения подробной информации выберите интересующий продукт', menu.reply).then(
+            function (sended) {
+                var chatId = sended.chat.id;
+                var messageId = sended.message_id;
+                bot.onReplyToMessage(chatId, messageId, function (message) {
+                    console.log("message1:"+message.text);
+                    if (typeof message.text !== "undefined") {
+                        console.log("result:"+g_dep_arr.toString());
+                        for (var atr in g_dep_arr) {
+                            console.log("message2:"+message.text);
+                            if (message.text = atr){
+                                bot.sendMessage(msg.from.id, "Информация по вкладу "+g_dep_arr[atr].title.trim(), menu.products)
+                            }
+                        }
+                    }
+                })
+            }
+        )
+    }
+    else {
+        bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
+    }
+};
 
 function vb_bonus(msg){
   var bonuses = require("./json/bonus.json");
@@ -278,34 +354,6 @@ function vb_youtube(msg){
     bot.sendMessage(msg.from.id,resp,menu.main);
 }
 
-var findProducts = function(p_collection, callback) {
-    var resp = "";
-    MongoClient.connect(mongourl, function(err, db) {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            var cursor = db.collection(p_collection).find().toArray(function (err, result) {
-                if (err) {
-                    console.log(err);
-                }
-                else {
-                    if (result.length) {
-                        for (var atr in result) {
-                            resp += "/"+p_collection + atr + " [" + result[atr].title.trim() + "]("+cont.bank_khb + result[atr].link.trim() + ")\n";
-                        }
-                    }
-                    else {
-                        resp = "По вашему запросу ничего не найдено :-(";
-                    }
-                }
-                db.close();
-                callback(resp);
-            });
-        };
-    });
-};
-
 var findNear = function(coord, p_type, callback) {
     var resp;
     if (typeof coord == "undefined") {
@@ -359,96 +407,27 @@ var findNear = function(coord, p_type, callback) {
    }
 };
 
-//var findNearOffice = function(db,coord,fromId, callback) {
-//  if(typeof coord !== "undefined") {
-//    db.collection('office').aggregate(,
-//      function (err, result) {
-//        if (err) {
-//          console.log(err);
-//        } else if (result.length) {
-//          //console.log(result[0].loc.coordinates);
-//          var resp = "Ближайший офис к вам работает:\n " + result[0].desc;
-//          resp += "\nНаходится в: " + result[0].distance.toFixed(0) + " метрах";
-//          bot.sendMessage(fromId, resp, menu.main);
-//          bot.sendLocation(fromId, result[0].loc.coordinates[1], result[0].loc.coordinates[0], menu.main);
-//        } else {
-//          console.log('No document(s) found with defined "find" criteria!');
-//        }
-//        //Close connection
-//        db.close();
-//      });
-//  }
-//};
-
-function vb_curs2(msg) {
+function vb_curs3(msg) {
     var fromId = msg.from.id;
     var curr = require("./json/currency.json");
-    bot.sendMessage(msg.from.id, 'Пожалуйста, введите наименование вашего населенного пункта', menu.reply)
-        .then(function (sended) {
-            var chatId = sended.chat.id;
-            var messageId = sended.message_id;
-            bot.onReplyToMessage(chatId, messageId, function (message) {
-                if (typeof message.text !== "undefined") {
-                    findCity(message.text.trim().toLowerCase(), function (err, url) {
-                        if (err) {
-                            bot.sendMessage(fromId, err, menu.main)
-                        }
-                        else {
-                            console.log(url);
-                            require("./parse_curs.js").get_curs(url, function (err, curs_json) {
-                                if (err) {
-                                    bot.sendMessage(fromId, err, menu.main)
-                                }
-                                else {
-                                    //console.log("JSON : " + curs_json);
-                                    var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
-                                    for (var i in curs_json.rates) {
-                                        curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
-                                            " • покупка   " + curs_json.rates[i].buy + "\n" +
-                                            " • продажа   " + curs_json.rates[i].sell + "\n";
-                                    }
-                                    bot.sendMessage(fromId, curs_office, menu.main)
-                                }
-                            })
-                        }
-                        ;
-                    });
+    require("./modules.js").GetUserUrl(msg.from.id, function(url) {
+        console.log(url);
+        require("./parse_curs.js").get_curs(url, function (err, curs_json) {
+            if (err) {
+                bot.sendMessage(fromId, err, menu.main)
+            }
+            else {
+                console.log("JSON : " + curs_json);
+                var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
+                for (var i in curs_json.rates) {
+                    curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
+                        " • покупка   " + curs_json.rates[i].buy + "\n" +
+                        " • продажа   " + curs_json.rates[i].sell + "\n";
                 }
-                 else {
-                    console.log('No document(s) found with defined "find" criteria!');
-                }
-            });
-        });
-};
-
-var findCity = function(cityName, callback) {
-    console.log(cityName);
-    MongoClient.connect(mongourl, function(err, db) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            var cursor = db.collection('cities').find({name: cityName}).toArray(function (err, result) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    else {
-                        var url, err;
-                        if (result.length) {
-                            for (var atr in result) {
-                                url = cont.bank_url + result[atr].synonym;
-                                console.log("url="+url);
-                                callback("", url);
-                            };
-                        }
-                        else {
-                            callback("К сожалению, я не знаю такого города", "");
-                        }
-                    };
-                    db.close();
-                })
-        }
-    });
+                bot.sendMessage(fromId, curs_office, menu.main)
+            }
+        })
+    })
 };
 
 //TODO найти решения для таблицы
