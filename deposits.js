@@ -47,6 +47,7 @@ request({
             }
         });
         str += ' ]';
+        //var json_splitted = str.split("\n                ");
         var json_splitted = str.split("\n                ");
         var json = "";
         for(var id in json_splitted)

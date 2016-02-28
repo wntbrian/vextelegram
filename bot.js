@@ -17,7 +17,7 @@ var options = {
 };
 
 require("./credits.js");
-require("./deposits.js");
+//require("./deposits.js");
 require("./test.js");
 var news_json;
 var yt_json;
@@ -116,7 +116,7 @@ bot.on('message', function (msg) {
                     vb_credit_cards(msg);
                     break;
                 case commands.deposit:
-                    vb_deposits2(msg);
+                    vb_deposits(msg);
                     break;
                 case commands.bonus:
                     vb_bonus(msg);
@@ -214,7 +214,7 @@ function vb_credit_cards(msg) {
 function vb_deposits(msg) {
     var resp = "";
     if (g_dep_arr.length) {
-        for (var atr in result) {
+        for (var atr in g_dep_arr) {
             resp += "[Вклад " + g_dep_arr[atr].title.trim() + "](" + cont.bank_khb + g_dep_arr[atr].link.trim() + ")\n";
         }
         bot.sendMessage(msg.from.id, resp, menu.products)
@@ -231,7 +231,7 @@ function vb_deposits2(msg) {
         for (var atr in g_dep_arr) {
             resp += atr + " - Вклад *" + g_dep_arr[atr].title.trim() + "*\n";
         }
-        bot.sendMessage(msg.from.id, resp, menu.products)
+        bot.sendMessage(msg.from.id, resp, menu.products);
         bot.sendMessage(msg.from.id, 'Для получения подробной информации выберите интересующий продукт', menu.reply).then(
             function (sended) {
                 var chatId = sended.chat.id;
@@ -239,8 +239,12 @@ function vb_deposits2(msg) {
                 bot.onReplyToMessage(chatId, messageId, function (message) {
                     if (typeof message.text !== "undefined") {
                         for (var atr in g_dep_arr) {
-                            if (message.text = atr) {
-                                bot.sendMessage(msg.from.id, "Информация по вкладу " + g_dep_arr[atr].title.trim(), menu.products)
+                            if (message.text == atr) {
+                                //var txt = "*Информация по вкладу [" + g_dep_arr[atr].title.trim() + "](" + cont.bank_khb + g_dep_arr[atr].link + ")*\n";
+                                var txt = "*Информация по вкладу " + g_dep_arr[atr].title.trim() + "*\n";
+                                txt += g_dep_arr[atr].desc;
+                                txt += "\n" + cont.bank_khb + g_dep_arr[atr].link;
+                                bot.sendMessage(msg.from.id, txt, menu.products)
                             }
                         }
                     }
