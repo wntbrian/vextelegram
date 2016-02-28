@@ -96,7 +96,7 @@ module.exports = {
     GetUserUrl: function(userID, callback) {
         require("./modules.js").GetUserPlace(userID, function(err, placesynonym) {
             if (err) {
-                bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
+                callback("");
             }
             else {
                 callback(cont.bank_url + placesynonym);

@@ -434,20 +434,25 @@ function vb_curs3(msg) {
     var fromId = msg.from.id;
     var curr = require("./json/currency.json");
     require("./modules.js").GetUserUrl(msg.from.id, function (url) {
-        require("./parse_curs.js").get_curs(url, function (err, curs_json) {
-            if (err) {
-                bot.sendMessage(fromId, err, menu.main)
-            }
-            else {
-                var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
-                for (var i in curs_json.rates) {
-                    curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
-                        " • покупка   " + curs_json.rates[i].buy + "\n" +
-                        " • продажа   " + curs_json.rates[i].sell + "\n";
+        if (url != "") {
+            require("./parse_curs.js").get_curs(url, function (err, curs_json) {
+                if (err) {
+                    bot.sendMessage(fromId, err, menu.main)
                 }
-                bot.sendMessage(fromId, curs_office, menu.main)
-            }
-        })
+                else {
+                    var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
+                    for (var i in curs_json.rates) {
+                        curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
+                            " • покупка   " + curs_json.rates[i].buy + "\n" +
+                            " • продажа   " + curs_json.rates[i].sell + "\n";
+                    }
+                    bot.sendMessage(fromId, curs_office, menu.main)
+                }
+            })
+        }
+        else {
+            bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
+        }
     })
 };
 
