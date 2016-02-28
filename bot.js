@@ -290,6 +290,9 @@ function vb_near(msg, p_type) {
                 if (typeof message.location == "undefined") {
                     tmp_loc = [30.35515, 59.91884];
                 }
+                else {
+                    tmp_loc = message.location
+                }
                 ;
                 findNear(tmp_loc, p_type, function (err, loc) {
                     if (err) {
