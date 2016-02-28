@@ -1,0 +1,51 @@
+{
+  "bank_url" :"http://www.vostbank.ru/",
+  "bank_khb" :"http://www.vostbank.ru/khabarovsk",
+  "main_url": [
+    {
+      "title": "Официальный сайт",
+      "link": "vostbank.ru"
+    },
+    {
+      "title": "Интернет-банк",
+      "link": "online.vostbank.ru"
+    },
+    {
+      "title": "Оплатить кредит online",
+      "link": "pay.vostbank.ru"
+    }
+  ],
+  "telephones": [
+    {
+      "title": "☎",
+      "numb": "8-800-100-7-100"
+    }
+  ],
+  "social_url": [
+    {
+      "title": "Вконтакте",
+      "link": "http://vk.com/vostbankru"
+    },
+    {
+      "title": "Одноклассники",
+      "link": "http://ok.ru/vostbank"
+    },
+    {
+      "title": "Facebook",
+      "link": "http://www.facebook.com/vostbank"
+    },
+    {
+      "title": "Instagram",
+      "link": "http://www.instagram.com/vostbank.ru"
+    },
+    {
+      "title": "Twitter",
+      "link": "http://twitter.com/vostbank"
+    }
+  ],
+  "rss": {
+    "youtube_channel": "https://www.youtube.com/feeds/videos.xml?channel_id=UCkz_SV9S0wqLjS5vjE-kIyA",
+    "news_feed": "http://www.vostbank.ru/news/feed/"
+  }
+}
+

@@ -237,11 +237,8 @@ function vb_deposits2(msg) {
                 var chatId = sended.chat.id;
                 var messageId = sended.message_id;
                 bot.onReplyToMessage(chatId, messageId, function (message) {
-                    console.log("message1:" + message.text);
                     if (typeof message.text !== "undefined") {
-                        console.log("result:" + g_dep_arr.toString());
                         for (var atr in g_dep_arr) {
-                            console.log("message2:" + message.text);
                             if (message.text = atr) {
                                 bot.sendMessage(msg.from.id, "Информация по вкладу " + g_dep_arr[atr].title.trim(), menu.products)
                             }
@@ -420,7 +417,6 @@ var findNear = function (coord, p_type, callback) {
                         else {
                             resp = {"desc": "К сожалению, поблизости ничего не найдено"};
                         }
-                        console.log(resp);
                         db.close();
                         callback("", resp);
                     }
@@ -435,13 +431,11 @@ function vb_curs3(msg) {
     var fromId = msg.from.id;
     var curr = require("./json/currency.json");
     require("./modules.js").GetUserUrl(msg.from.id, function (url) {
-        console.log(url);
         require("./parse_curs.js").get_curs(url, function (err, curs_json) {
             if (err) {
                 bot.sendMessage(fromId, err, menu.main)
             }
             else {
-                console.log("JSON : " + curs_json);
                 var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
                 for (var i in curs_json.rates) {
                     curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
