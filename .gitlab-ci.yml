@@ -3,8 +3,18 @@
   tags:
     - dev-docker
   only:
-    - master
+    - develop
   script:
     - sudo docker stop $PJ_DOCKER_NAME_DEV
     - sudo docker cp ./ $PJ_DOCKER_NAME_DEV:/var/www/
     - sudo docker start $PJ_DOCKER_NAME_DEV
+"http://docker.local:8311":
+  type: deploy
+  tags:
+    - docker
+  only:
+    - master
+  script:
+    - sudo docker stop $PJ_DOCKER_NAME
+    - sudo docker cp ./ $PJ_DOCKER_NAME:/var/www/
+    - sudo docker start $PJ_DOCKER_NAME
