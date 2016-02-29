@@ -28,6 +28,12 @@ require("./rssfeed.js").rss(cont.rss.news_feed, function (json, err) {
     news_json = json;
 });
 ///
+// TODO курс цб, не работает экспорт функции
+//var curs_cb;
+//require("./modules.js").curs_cb(function (cb) {
+//    curs_cb = cb;
+//});
+///
 
 var g_dep_arr;
 var g_card_arr;
