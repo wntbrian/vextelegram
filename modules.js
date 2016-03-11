@@ -1,4 +1,5 @@
 var cont = require("./json/contacts.json");
+var request = require('request');
 var MongoClient = require('mongodb').MongoClient
     , format = require('util').format;
 var mongourl = "mongodb://127.0.0.1:27017/vexbot";
@@ -42,11 +43,33 @@ module.exports = {
                                 callback("", result[0]);
                         }
                         else {
-                            callback("К сожалению, я не знаю такого города", "");
+                            callback("В вашем населенном пункте нет отделения восточного банка, попробоуйте указать ближайший к вам крупный насленный пункт, с использованием команды /setplace", "");
                         }
-                    };
+                    }
                     db.close();
                 })
+            }
+        });
+    },
+    findCityYandex: function(location, callback) {
+        var url = 'https://geocode-maps.yandex.ru/1.x/?geocode='+location.longitude+','+location.latitude+'&format=json';
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var flag = false;
+                var fbResponse = JSON.parse(body);
+                for(var id in fbResponse.response.GeoObjectCollection.featureMember)
+                {
+                    if (fbResponse.response.GeoObjectCollection.featureMember[id].GeoObject.metaDataProperty.GeocoderMetaData.kind == "locality")
+                    {
+                        callback(fbResponse.response.GeoObjectCollection.featureMember[id].GeoObject.metaDataProperty.GeocoderMetaData.kind, fbResponse.response.GeoObjectCollection.featureMember[id].GeoObject.name);
+                        flag = true;
+                    }
+                }
+                if (!flag){
+                    callback("К сожалению, я не знаю такого города", "");
+                }
+            } else {
+                callback("К сожалению, я не знаю такого города", "");
             }
         });
     }
@@ -107,7 +130,7 @@ module.exports = {
                 var req = require('request');
                 var cb;
                 var url = 'http://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
-        require('request').({url: url, json: true}, function (error, response, body) {
+                request({url: url, json: true}, function (error, response, body) {
                     if (!error && response.statusCode == 200) {
                         cb = JSON.parse(body);
                     } else {
@@ -115,7 +138,6 @@ module.exports = {
                     }
                 });
                 callback(cb["query"]["results"]["rate"]);
-
     }
 // END EXPORTMODULE
 };

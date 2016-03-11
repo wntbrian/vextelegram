@@ -66,11 +66,11 @@ var bot = new TelegramBot(token, options);
 bot.setWebHook(process.env.webhookurl + "/" + token);
 
 // Matches /echo [whatever]
-bot.onText(/\/echo (.+)/, function (msg, match) {
-    var fromId = msg.from.id;
-    var resp = match[1];
-    bot.sendMessage(fromId, resp);
-});
+//bot.onText(/\/echo (.+)/, function (msg, match) {
+//    var fromId = msg.from.id;
+//    var resp = match[1];
+//    bot.sendMessage(fromId, resp);
+//});
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
@@ -128,6 +128,9 @@ bot.on('message', function (msg) {
                 case commands.bonus:
                     vb_bonus(msg);
                     break;
+                case commands.city:
+                    vb_showcity(msg);
+                    break;
                 default:
                     bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
             }
@@ -160,16 +163,43 @@ function vb_saveuserplace(msg) {
         var chatId = sended.chat.id;
         var messageId = sended.message_id;
         bot.onReplyToMessage(chatId, messageId, function (message) {
-            if (typeof message.text !== "undefined") {
-                require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
-                    if (err) {
-                        bot.sendMessage(msg.from.id, err, menu.main)
-                    }
-                    else {
-                        require("./modules.js").SaveUserPlace({"userid": msg.from.id, "place": place.synonym});
-                        bot.sendMessage(msg.from.id, "Исполнено", menu.main);
-                    }
-                })
+            if (typeof message.location !== "undefined") {
+                require("./modules.js").findCityYandex(message.location, function (type, city) {
+                      if (type == 'locality') {
+                          require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
+                              if (err) {
+                                  bot.sendMessage(chatId, err, menu.main)
+                              }
+                              else {
+                                  require("./modules.js").SaveUserPlace({
+                                      "userid": msg.from.id,
+                                      "place": place.synonym
+                                  });
+                                  bot.sendMessage(chatId, "Установлен нас.пункт: " + city, menu.main);
+                              }
+                          })
+                      }
+                      else
+                      {
+                          bot.sendMessage(chatId, "Вы отправили не верные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                      }
+                  }
+                );
+            }else {
+                if (typeof message.text !== "undefined") {
+                    require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
+                        if (err) {
+                            bot.sendMessage(chatId, err, menu.main)
+                        }
+                        else {
+                            require("./modules.js").SaveUserPlace({"userid": msg.from.id, "place": place.synonym});
+                            bot.sendMessage(chatId, "Установлен нас.пункт: " + message.text.trim(), menu.main);
+                        }
+                    })
+                }else
+                {
+                    bot.sendMessage(chatId, "Вы отправили не верные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                }
             }
         })
     })
@@ -457,7 +487,7 @@ function vb_curs3(msg) {
                             " • покупка   " + curs_json.rates[i].buy + "\n" +
                             " • продажа   " + curs_json.rates[i].sell + "\n";
                     }
-                    bot.sendMessage(fromId, curs_office, menu.main)
+                    bot.sendMessage(fromId, curs_office, menu.main);
                 }
             })
         }
@@ -495,4 +525,21 @@ function logusers(msg){
             db.close();
         });
     });
+}
+function vb_showcity(msg){
+    bot.sendMessage(msg.from.id, 'В каком я городе? Отправь location', menu.reply).then(
+      function (sended) {
+          var chatId = sended.chat.id;
+          var messageId = sended.message_id;
+          bot.onReplyToMessage(chatId, messageId, function (message) {
+                 if (typeof message.location !== "undefined") {
+                    require("./modules.js").findCityYandex(message.location, function (type, place) {
+                          bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
+                      }
+                    );
+                }
+            }
+          )
+      }
+    )
 }
