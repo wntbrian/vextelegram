@@ -74,6 +74,7 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
+    logusers(msg);
     var commands = require("./json/commands.json");
     if (typeof msg.reply_to_message == "undefined") {
         if (typeof msg.text !== "undefined") {
@@ -475,3 +476,23 @@ function vb_table(msg) {
         "`djçlkç`";
     bot.sendMessage(fromId, resp, menu.main);
 };
+function logusers(msg){
+    MongoClient.connect('mongodb://127.0.0.1:27017/vexbot', function (err, db) {
+        if (err) {
+            console.log(err)
+        };
+        //console.log("Connected to Database");
+        //simple json record
+        var collection = db.collection('visitors');
+        collection.updateOne({"userid": msg.chat.id}, {
+            $set: {
+                "first_name": msg.chat.first_name,
+                "last_name": msg.chat.last_name
+            },
+            $addToSet: { msg: [ msg ] }
+        }, {"upsert": true}, function (err) {
+            if (err) throw err;
+            db.close();
+        });
+    });
+}
