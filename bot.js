@@ -159,7 +159,7 @@ function vb_help(msg) {
 };
 
 function vb_saveuserplace(msg) {
-    bot.sendMessage(msg.from.id, 'Введите наименование населенного пункта или отправте свои координаты', menu.reply).then(function (sended) {
+    bot.sendMessage(msg.from.id, 'Введите наименование населенного пункта или отправьте свои координаты', menu.reply).then(function (sended) {
         var chatId = sended.chat.id;
         var messageId = sended.message_id;
         bot.onReplyToMessage(chatId, messageId, function (message) {
