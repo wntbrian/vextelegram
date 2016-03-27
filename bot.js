@@ -476,27 +476,30 @@ function vb_curs3(msg) {
         }
         else {
             bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте ваши координаты.', menu.none)
-            //    .then(
-            //    function (sended) {
-            //        var chatId = sended.chat.id;
-            //        var messageId = sended.message_id;
-            //        bot.onReplyToMessage(chatId, messageId, function (message) {
-            //                if (typeof message.location !== "undefined") {
-            //                    require("./modules.js").findCityYandex(message.location, function (type, place) {
-            //                        require("./modules.js").findCity(place,function(a,synonym){
-            //                            require("./modules.js").SaveUserPlace({
-            //                                "userid": message.from.id,
-            //                                "place": synonym.synonym
-            //                            });
-            //                        });
-            //                        //bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
-            //                        }
-            //                    );
-            //                }
-            //            }
-            //        )
-            //    }
-            //)
+                .then(
+                function (sended) {
+                    var chatId = sended.chat.id;
+                    var messageId = sended.message_id;
+                    bot.onReplyToMessage(chatId, messageId, function (message) {
+                        InsertUserCitybyLoc(message, chatId, true, function (){
+                            vb_curs3(message);
+                        });
+                            //if (typeof message.location !== "undefined") {
+                            //    require("./modules.js").findCityYandex(message.location, function (type, place) {
+                            //        require("./modules.js").findCity(place,function(a,synonym){
+                            //            require("./modules.js").SaveUserPlace({
+                            //                "userid": message.from.id,
+                            //                "place": synonym.synonym
+                            //            });
+                            //        });
+                            //        //bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
+                            //        }
+                            //    );
+                            //}
+                        }
+                    )
+                }
+            )
             //bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
         }
     })
@@ -547,8 +550,8 @@ function vb_showcity(msg){
           )
       }
     )
-}3
-function InsertUserCitybyLoc(message,chatId,q){
+}
+var InsertUserCitybyLoc = function (message,chatId,q, callback){
     require("./modules.js").findCityYandex(message.location, function (type, city) {
             if (type == 'locality') {
                 require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
@@ -577,4 +580,5 @@ function InsertUserCitybyLoc(message,chatId,q){
             }
         }
     );
+    callback();
 }
