@@ -292,38 +292,37 @@ function vb_near(msg, p_type) {
             bot.onReplyToMessage(chatId, messageId, function (message) {
                 var tmp_loc;
                 if (typeof message.location == "undefined") {
-                    tmp_loc = [30.35515, 59.91884];
+                    bot.sendMessage(fromId, 'Ой! Я не получил координаты, попробуйте пожалуйства еще раз.', menu.main);
                 }
                 else {
                     tmp_loc = message.location
-                }
-                ;
-                findNear(tmp_loc, p_type, function (err, loc) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    else {
-                        switch (p_type) {
-                            case "atm" :
-                                var txt = "";
-                                txt = "Расположение ближайшего банкомата: *" + loc.desc;
-                                txt += "*, находится в " + loc.distance + " метрах";
-                                bot.sendMessage(fromId, txt, menu.main);
-                                bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
-                                break;
-                            case "office":
-                                parse_office_desc(loc.desc, function (txt) {
-                                    txt = "*Ближайшее отделение находится в " + loc.distance + " метрах*\n" +
-                                        "*Режим работы:*" + txt;
+                    findNear(tmp_loc, p_type, function (err, loc) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            switch (p_type) {
+                                case "atm" :
+                                    var txt = "";
+                                    txt = "Расположение ближайшего банкомата: *" + loc.desc;
+                                    txt += "*, находится в " + loc.distance + " метрах";
                                     bot.sendMessage(fromId, txt, menu.main);
                                     bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
-                                });
-                                break;
+                                    break;
+                                case "office":
+                                    parse_office_desc(loc.desc, function (txt) {
+                                        txt = "*Ближайшее отделение находится в " + loc.distance + " метрах*\n" +
+                                            "*Режим работы:*" + txt;
+                                        bot.sendMessage(fromId, txt, menu.main);
+                                        bot.sendLocation(fromId, loc.coordX, loc.coordY, menu.main);
+                                    });
+                                    break;
+                            }
+                            ;
                         }
                         ;
-                    }
-                    ;
-                });
+                    });
+                }
             });
         });
     // TODO расширить список банкоматов на 2 или 3
