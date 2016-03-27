@@ -135,6 +135,10 @@ bot.on('message', function (msg) {
                     bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
             }
         }
+        else if (typeof msg.location !== "undefined"){
+            InsertUserCitybyLoc(msg,msg.from.id,false);
+        }
+
     }
     // photo can be: a file path, a stream or a Telegram file_id
     //var photo = 'cat.jpg';
@@ -164,27 +168,7 @@ function vb_saveuserplace(msg) {
         var messageId = sended.message_id;
         bot.onReplyToMessage(chatId, messageId, function (message) {
             if (typeof message.location !== "undefined") {
-                require("./modules.js").findCityYandex(message.location, function (type, city) {
-                      if (type == 'locality') {
-                          require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
-                              if (err) {
-                                  bot.sendMessage(chatId, err, menu.main)
-                              }
-                              else {
-                                  require("./modules.js").SaveUserPlace({
-                                      "userid": msg.from.id,
-                                      "place": place.synonym
-                                  });
-                                  bot.sendMessage(chatId, "Установлен нас.пункт: " + city, menu.main);
-                              }
-                          })
-                      }
-                      else
-                      {
-                          bot.sendMessage(chatId, "Вы отправили не верные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
-                      }
-                  }
-                );
+                InsertUserCitybyLoc(message,chatId,true);
             }else {
                 if (typeof message.text !== "undefined") {
                     require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
@@ -491,7 +475,29 @@ function vb_curs3(msg) {
             })
         }
         else {
-            bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
+            bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте ваши координаты.', menu.none)
+            //    .then(
+            //    function (sended) {
+            //        var chatId = sended.chat.id;
+            //        var messageId = sended.message_id;
+            //        bot.onReplyToMessage(chatId, messageId, function (message) {
+            //                if (typeof message.location !== "undefined") {
+            //                    require("./modules.js").findCityYandex(message.location, function (type, place) {
+            //                        require("./modules.js").findCity(place,function(a,synonym){
+            //                            require("./modules.js").SaveUserPlace({
+            //                                "userid": message.from.id,
+            //                                "place": synonym.synonym
+            //                            });
+            //                        });
+            //                        //bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
+            //                        }
+            //                    );
+            //                }
+            //            }
+            //        )
+            //    }
+            //)
+            //bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
         }
     })
 };
@@ -531,14 +537,44 @@ function vb_showcity(msg){
           var chatId = sended.chat.id;
           var messageId = sended.message_id;
           bot.onReplyToMessage(chatId, messageId, function (message) {
-                 if (typeof message.location !== "undefined") {
-                    require("./modules.js").findCityYandex(message.location, function (type, place) {
-                          bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
-                      }
-                    );
-                }
-            }
+                  if (typeof message.location !== "undefined") {
+                      require("./modules.js").findCityYandex(message.location, function (type, place) {
+                              bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
+                          }
+                      );
+                  }
+              }
           )
       }
     )
+}3
+function InsertUserCitybyLoc(message,chatId,q){
+    require("./modules.js").findCityYandex(message.location, function (type, city) {
+            if (type == 'locality') {
+                require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
+                    if (err) {
+                        bot.sendMessage(chatId, err, menu.main)
+                    }
+                    else {
+                        var txt ='';
+                        if (q){
+                            txt = "Установлен нас.пункт: ";
+                        }else{
+                            txt = "Ваш нас.пункт: ";
+                        }
+
+                        require("./modules.js").SaveUserPlace({
+                            "userid": message.from.id,
+                            "place": place.synonym
+                        });
+                        bot.sendMessage(chatId, txt + city, menu.main);
+                    }
+                })
+            }
+            else
+            {
+                bot.sendMessage(chatId, "Вы отправили неверные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+            }
+        }
+    );
 }
