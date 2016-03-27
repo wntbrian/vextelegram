@@ -15,7 +15,7 @@ var options = {
         //cert: __dirname+'/crt.pem'
     }
 };
-
+//test
 require("./credits.js");
 //require("./deposits.js");
 require("./test.js");
@@ -27,6 +27,12 @@ require("./rssfeed.js").rss(cont.rss.youtube_channel, function (json, err) {
 require("./rssfeed.js").rss(cont.rss.news_feed, function (json, err) {
     news_json = json;
 });
+///
+// TODO курс цб, не работает экспорт функции
+//var curs_cb;
+//require("./modules.js").curs_cb(function (cb) {
+//    curs_cb = cb;
+//});
 ///
 
 var g_dep_arr;
@@ -60,14 +66,15 @@ var bot = new TelegramBot(token, options);
 bot.setWebHook(process.env.webhookurl + "/" + token);
 
 // Matches /echo [whatever]
-bot.onText(/\/echo (.+)/, function (msg, match) {
-    var fromId = msg.from.id;
-    var resp = match[1];
-    bot.sendMessage(fromId, resp);
-});
+//bot.onText(/\/echo (.+)/, function (msg, match) {
+//    var fromId = msg.from.id;
+//    var resp = match[1];
+//    bot.sendMessage(fromId, resp);
+//});
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
+    logusers(msg);
     var commands = require("./json/commands.json");
     if (typeof msg.reply_to_message == "undefined") {
         if (typeof msg.text !== "undefined") {
@@ -121,6 +128,9 @@ bot.on('message', function (msg) {
                 case commands.bonus:
                     vb_bonus(msg);
                     break;
+                case commands.city:
+                    vb_showcity(msg);
+                    break;
                 default:
                     bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
             }
@@ -153,16 +163,43 @@ function vb_saveuserplace(msg) {
         var chatId = sended.chat.id;
         var messageId = sended.message_id;
         bot.onReplyToMessage(chatId, messageId, function (message) {
-            if (typeof message.text !== "undefined") {
-                require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
-                    if (err) {
-                        bot.sendMessage(msg.from.id, err, menu.main)
-                    }
-                    else {
-                        require("./modules.js").SaveUserPlace({"userid": msg.from.id, "place": place.synonym});
-                        bot.sendMessage(msg.from.id, "Исполнено", menu.main);
-                    }
-                })
+            if (typeof message.location !== "undefined") {
+                require("./modules.js").findCityYandex(message.location, function (type, city) {
+                      if (type == 'locality') {
+                          require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
+                              if (err) {
+                                  bot.sendMessage(chatId, err, menu.main)
+                              }
+                              else {
+                                  require("./modules.js").SaveUserPlace({
+                                      "userid": msg.from.id,
+                                      "place": place.synonym
+                                  });
+                                  bot.sendMessage(chatId, "Установлен нас.пункт: " + city, menu.main);
+                              }
+                          })
+                      }
+                      else
+                      {
+                          bot.sendMessage(chatId, "Вы отправили не верные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                      }
+                  }
+                );
+            }else {
+                if (typeof message.text !== "undefined") {
+                    require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
+                        if (err) {
+                            bot.sendMessage(chatId, err, menu.main)
+                        }
+                        else {
+                            require("./modules.js").SaveUserPlace({"userid": msg.from.id, "place": place.synonym});
+                            bot.sendMessage(chatId, "Установлен нас.пункт: " + message.text.trim(), menu.main);
+                        }
+                    })
+                }else
+                {
+                    bot.sendMessage(chatId, "Вы отправили не верные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                }
             }
         })
     })
@@ -449,7 +486,7 @@ function vb_curs3(msg) {
                             " • покупка   " + curs_json.rates[i].buy + "\n" +
                             " • продажа   " + curs_json.rates[i].sell + "\n";
                     }
-                    bot.sendMessage(fromId, curs_office, menu.main)
+                    bot.sendMessage(fromId, curs_office, menu.main);
                 }
             })
         }
@@ -468,3 +505,40 @@ function vb_table(msg) {
         "`djçlkç`";
     bot.sendMessage(fromId, resp, menu.main);
 };
+function logusers(msg){
+    MongoClient.connect('mongodb://127.0.0.1:27017/vexbot', function (err, db) {
+        if (err) {
+            console.log(err)
+        };
+        //console.log("Connected to Database");
+        //simple json record
+        var collection = db.collection('visitors');
+        collection.updateOne({"userid": msg.chat.id}, {
+            $set: {
+                "first_name": msg.chat.first_name,
+                "last_name": msg.chat.last_name
+            },
+            $addToSet: { msg: [ msg ] }
+        }, {"upsert": true}, function (err) {
+            if (err) throw err;
+            db.close();
+        });
+    });
+}
+function vb_showcity(msg){
+    bot.sendMessage(msg.from.id, 'В каком я городе? Отправь location', menu.reply).then(
+      function (sended) {
+          var chatId = sended.chat.id;
+          var messageId = sended.message_id;
+          bot.onReplyToMessage(chatId, messageId, function (message) {
+                 if (typeof message.location !== "undefined") {
+                    require("./modules.js").findCityYandex(message.location, function (type, place) {
+                          bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
+                      }
+                    );
+                }
+            }
+          )
+      }
+    )
+}
