@@ -504,6 +504,10 @@ function vb_curs3(msg) {
                                               }
                                           })
                                       }
+                                      else
+                                      {
+                                          bot.sendMessage(chatId, txt, menu.main);
+                                      }
                                   });
                               });
                           }else{
@@ -583,8 +587,8 @@ var InsertUserCitybyLoc = function (message,chatId,q, callback){
             if (type == 'locality') {
                 require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
                     if (err) {
-                        callback(chatId,err,menu.main);
-                        //bot.sendMessage(chatId, err, menu.main)
+                        //callback(chatId,err,menu.main);
+                        bot.sendMessage(chatId, err, menu.main)
                     }
                     else {
                         var txt ='';
@@ -604,7 +608,7 @@ var InsertUserCitybyLoc = function (message,chatId,q, callback){
             }
             else
             {
-                callback(true,chatId, "Вы отправили неверные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                callback(chatId, "Вы отправили неверные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
             }
         }
     );
