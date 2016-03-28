@@ -135,8 +135,10 @@ bot.on('message', function (msg) {
                     bot.sendMessage(chatId, "Для открытия стартового меню наберите /start");
             }
         }
-        else if (typeof msg.location !== "undefined"){
-            InsertUserCitybyLoc(msg,msg.from.id,false);
+        if (typeof msg.location !== "undefined"){
+            InsertUserCitybyLoc(msg,msg.from.id,false,function(chatId,txt,menu){
+                bot.sendMessage(chatId,txt,menu);
+            });
         }
 
     }
@@ -168,7 +170,9 @@ function vb_saveuserplace(msg) {
         var messageId = sended.message_id;
         bot.onReplyToMessage(chatId, messageId, function (message) {
             if (typeof message.location !== "undefined") {
-                InsertUserCitybyLoc(message,chatId,true);
+                InsertUserCitybyLoc(message,chatId,true,function(chatId,err,menu){
+                    bot.sendMessage(chatId,err,menu);
+                });
             }else {
                 if (typeof message.text !== "undefined") {
                     require("./modules.js").findCity(message.text.trim().toLowerCase(), function (err, place) {
@@ -475,15 +479,38 @@ function vb_curs3(msg) {
             })
         }
         else {
-            bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте ваши координаты.', menu.none)
+            bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте ваши координаты.', menu.reply)
                 .then(
                 function (sended) {
                     var chatId = sended.chat.id;
                     var messageId = sended.message_id;
                     bot.onReplyToMessage(chatId, messageId, function (message) {
-                        InsertUserCitybyLoc(message, chatId, true, function (){
-                            vb_curs3(message);
-                        });
+                          if (typeof message.location !== "undefined"){
+                              InsertUserCitybyLoc(message, chatId, true, function (chatId, txt, menu2){
+                                  require("./modules.js").GetUserUrl(msg.from.id, function (url) {
+                                      if (url != "") {
+                                          require("./parse_curs.js").get_curs(url, function (err, curs_json) {
+                                              if (err) {
+                                                  bot.sendMessage(chatId, err, menu.main)
+                                              }
+                                              else {
+                                                  var curs_office = "*Курс валют для отделений " + curs_json.title + "*\n";
+                                                  for (var i in curs_json.rates) {
+                                                      curs_office += curr[curs_json.rates[i].name].symbol + " " + curs_json.rates[i].name + "\n" +
+                                                      " • покупка   " + curs_json.rates[i].buy + "\n" +
+                                                      " • продажа   " + curs_json.rates[i].sell + "\n";
+                                                  }
+                                                  bot.sendMessage(chatId, curs_office, menu.main);
+                                              }
+                                          })
+                                      }
+                                  });
+                              });
+                          }else{
+                              bot.sendMessage(chatId, 'Вы отправили неверные координаты, попробуй еще раз.', menu.main);
+                          }
+
+
                             //if (typeof message.location !== "undefined") {
                             //    require("./modules.js").findCityYandex(message.location, function (type, place) {
                             //        require("./modules.js").findCity(place,function(a,synonym){
@@ -556,7 +583,8 @@ var InsertUserCitybyLoc = function (message,chatId,q, callback){
             if (type == 'locality') {
                 require("./modules.js").findCity(city.toLowerCase(), function (err, place) {
                     if (err) {
-                        bot.sendMessage(chatId, err, menu.main)
+                        callback(chatId,err,menu.main);
+                        //bot.sendMessage(chatId, err, menu.main)
                     }
                     else {
                         var txt ='';
@@ -570,15 +598,15 @@ var InsertUserCitybyLoc = function (message,chatId,q, callback){
                             "userid": message.from.id,
                             "place": place.synonym
                         });
-                        bot.sendMessage(chatId, txt + city, menu.main);
+                        callback(chatId, txt + city, menu.main);
                     }
                 })
             }
             else
             {
-                bot.sendMessage(chatId, "Вы отправили неверные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
+                callback(true,chatId, "Вы отправили неверные координаты или ошиблись в названии населенного пункта. Наберите команду /setplace и попробуй еще раз.", menu.main);
             }
         }
     );
-    callback();
+    //callback();
 }
