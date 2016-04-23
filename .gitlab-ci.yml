@@ -18,3 +18,14 @@
     - sudo docker stop $PJ_DOCKER_NAME
     - sudo docker cp ./ $PJ_DOCKER_NAME:/var/www/
     - sudo docker start $PJ_DOCKER_NAME
+"http://docker.local:8311 (release)":
+  type: deploy
+  tags:
+    - docker
+  only:
+    - release
+  script:
+    - sudo docker stop $PJ_DOCKER_NAME_release
+    - /usr/local/node/bin/enclose bot.js --x64
+    - sudo docker cp ./bot $PJ_DOCKER_NAME_release:/var/www
+    - sudo docker start $PJ_DOCKER_NAME_release

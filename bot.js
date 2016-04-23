@@ -11,13 +11,9 @@ var mongourl = "mongodb://127.0.0.1:27017/vexbot";
 var options = {
     webHook: {
         port: 8080
-        //key: __dirname+'/key.pem',
-        //cert: __dirname+'/crt.pem'
     }
 };
-//test
 require("./credits.js");
-//require("./deposits.js");
 require("./test.js");
 var news_json;
 var yt_json;
@@ -27,14 +23,6 @@ require("./rssfeed.js").rss(cont.rss.youtube_channel, function (json, err) {
 require("./rssfeed.js").rss(cont.rss.news_feed, function (json, err) {
     news_json = json;
 });
-///
-// TODO курс цб, не работает экспорт функции
-//var curs_cb;
-//require("./modules.js").curs_cb(function (cb) {
-//    curs_cb = cb;
-//});
-///
-
 var g_dep_arr;
 var g_card_arr;
 require("./modules.js").findProducts("deposit", function (json) {
@@ -55,22 +43,12 @@ var client = new Twitter({
 client.get('statuses/user_timeline', {screen_name: "vostbank", count: 10}, function (error, tweets, response) {
     if (error) throw error;
     twittermsg = tweets;
-    //console.log(response);  // Raw response object.
 });
-///
-
 function randomInt(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 var bot = new TelegramBot(token, options);
 bot.setWebHook(process.env.webhookurl + "/" + token);
-
-// Matches /echo [whatever]
-//bot.onText(/\/echo (.+)/, function (msg, match) {
-//    var fromId = msg.from.id;
-//    var resp = match[1];
-//    bot.sendMessage(fromId, resp);
-//});
 
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
@@ -142,10 +120,6 @@ bot.on('message', function (msg) {
         }
 
     }
-    // photo can be: a file path, a stream or a Telegram file_id
-    //var photo = 'cat.jpg';
-
-    //bot.sendPhoto(chatId, photo, {caption: 'Lovely kittens'});
 });
 
 function vb_start(msg) {
@@ -203,17 +177,14 @@ function vb_contacts(msg) {
     for (var i in cont.telephones) {
         resp += cont.telephones[i].title + " " + cont.telephones[i].numb + "\n";
     }
-    ;
     resp += "\n";
     for (var i in cont.main_url) {
         resp += "• [" + cont.main_url[i].title + "](" + cont.main_url[i].link + ")\n";
     }
-    ;
     resp += "\n*«Восточный» в социальных сетях*\n"
     for (var i in cont.social_url) {
         resp += "• [" + cont.social_url[i].title + "](" + cont.social_url[i].link + ")\n";
     }
-    ;
     bot.sendMessage(msg.from.id, resp, menu.main);
 }
 
@@ -234,8 +205,7 @@ function vb_credit_cards(msg) {
     else {
         bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
     }
-};
-
+}
 function vb_deposits(msg) {
     var resp = "";
     if (g_dep_arr.length) {
@@ -248,7 +218,6 @@ function vb_deposits(msg) {
         bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
     }
 }
-
 //TODO выбор продукта
 function vb_deposits2(msg) {
     var resp = "";
@@ -280,8 +249,7 @@ function vb_deposits2(msg) {
     else {
         bot.sendMessage(msg.from.id, "По вашему запросу ничего не найдено :-(", menu.products)
     }
-};
-
+}
 function vb_bonus(msg) {
     var bonuses = require("./json/bonus.json");
     var resp = "";
@@ -291,7 +259,6 @@ function vb_bonus(msg) {
     ;
     bot.sendMessage(msg.from.id, resp, menu.none);
 }
-
 function vb_sms(msg) {
     var sms_codes = require("./json/sms_codes.json");
     var resp = "";
@@ -299,15 +266,12 @@ function vb_sms(msg) {
     for (var i in sms_codes.title) {
         resp += sms_codes.title[i] + "\n";
     }
-    ;
     resp += "\n";
     for (var i in sms_codes.codes) {
         resp += "• " + sms_codes.codes[i].title + "\n  " + sms_codes.codes[i].text + "\n";
     }
-    ;
     bot.sendMessage(msg.from.id, resp, menu.none);
 }
-
 function vb_near(msg, p_type) {
     var fromId = msg.from.id;
     bot.sendMessage(msg.from.id, 'Пожалуйста, отправьте свое местоположение', menu.reply)
@@ -343,16 +307,13 @@ function vb_near(msg, p_type) {
                                     });
                                     break;
                             }
-                            ;
                         }
-                        ;
                     });
                 }
             });
         });
     // TODO расширить список банкоматов на 2 или 3
-};
-
+}
 var parse_office_desc = function (desc, callback) {
     var str_arr = desc.split(",");
     var ret = "";
@@ -360,7 +321,7 @@ var parse_office_desc = function (desc, callback) {
         ret += str_arr[i].replace("Касса:", "\n*Касса*\n").replace("Перерыв:", "\n*Перерыв*\n").replace("Отделение:", "\n") + "\n";
     }
     callback(ret);
-}
+};
 
 function vb_random_news(msg) {
     switch (randomInt(0, 9)) {
@@ -380,8 +341,8 @@ function vb_random_news(msg) {
         default:
             vb_news(msg);
     }
-    ;
-};
+
+}
 
 function vb_twitter(msg) {
     var resp = "twitter";
@@ -513,28 +474,13 @@ function vb_curs3(msg) {
                           }else{
                               bot.sendMessage(chatId, 'Вы отправили неверные координаты, попробуй еще раз.', menu.main);
                           }
-
-
-                            //if (typeof message.location !== "undefined") {
-                            //    require("./modules.js").findCityYandex(message.location, function (type, place) {
-                            //        require("./modules.js").findCity(place,function(a,synonym){
-                            //            require("./modules.js").SaveUserPlace({
-                            //                "userid": message.from.id,
-                            //                "place": synonym.synonym
-                            //            });
-                            //        });
-                            //        //bot.sendMessage(chatId,'Вы находитесь в населенном пунке: '+place,menu.main)
-                            //        }
-                            //    );
-                            //}
                         }
                     )
                 }
-            )
-            //bot.sendMessage(fromId, "Пожалуйста, задайте свой населенный пункт с помощью команды /setplace и затем повторите запрос", menu.main)
+            );
         }
     })
-};
+}
 
 //TODO найти решения для таблицы
 function vb_table(msg) {
@@ -544,7 +490,7 @@ function vb_table(msg) {
         "```пять шесть семь```" +
         "`djçlkç`";
     bot.sendMessage(fromId, resp, menu.main);
-};
+}
 function logusers(msg){
     MongoClient.connect('mongodb://127.0.0.1:27017/vexbot', function (err, db) {
         if (err) {
@@ -613,4 +559,4 @@ var InsertUserCitybyLoc = function (message,chatId,q, callback){
         }
     );
     //callback();
-}
+};
