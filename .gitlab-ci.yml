@@ -26,6 +26,6 @@
     - release
   script:
     - sudo docker stop $PJ_DOCKER_NAME_release
-    - sudo /usr/local/node/bin/enclose bot.js --x64
+    - enclose bot.js --x64
     - sudo docker cp ./bot $PJ_DOCKER_NAME_release:/var/www
     - sudo docker start $PJ_DOCKER_NAME_release
